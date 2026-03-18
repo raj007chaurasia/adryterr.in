@@ -129,6 +129,7 @@ class Media {
     scene,
     screen,
     text,
+    link,
     viewport,
     bend,
     textColor,
@@ -145,6 +146,7 @@ class Media {
     this.scene = scene;
     this.screen = screen;
     this.text = text;
+    this.link = link;
     this.viewport = viewport;
     this.bend = bend;
     this.textColor = textColor;
@@ -311,11 +313,13 @@ class Media {
       const localY = mouse.y;
 
       if (localX >= 0 && localX <= 1 && localY >= 0 && localY <= 1) {
+        this.isHovered = true;
         this.program.uniforms.uMouse.value = [
           lerp(this.program.uniforms.uMouse.value[0], localX, 0.1),
           lerp(this.program.uniforms.uMouse.value[1], localY, 0.1)
         ];
       } else {
+        this.isHovered = false;
         this.program.uniforms.uMouse.value = [
           lerp(this.program.uniforms.uMouse.value[0], 0.5, 0.05),
           lerp(this.program.uniforms.uMouse.value[1], 0.5, 0.05)
@@ -448,6 +452,7 @@ class App {
         scene: this.scene,
         screen: this.screen,
         text: data.text,
+        link: data.link,
         viewport: this.viewport,
         bend,
         textColor,
@@ -467,9 +472,20 @@ class App {
     const distance = (this.start - x) * (this.scrollSpeed * 0.025);
     this.scroll.target = this.scroll.position + distance;
   }
-  onTouchUp() {
+  onTouchUp(e) {
     this.isDown = false;
     this.onCheck();
+
+    const endX = e && (e.changedTouches ? e.changedTouches[0].clientX : e.clientX);
+    if (this.start !== undefined && endX !== undefined) {
+      const distance = Math.abs(this.start - endX);
+      if (distance < 8) { // Click threshold
+        const clicked = this.medias.find(m => m.isHovered);
+        if (clicked && clicked.link) {
+          window.open(clicked.link, '_blank', 'noopener,noreferrer');
+        }
+      }
+    }
   }
   onWheel(e) {
     const delta = e.deltaY || e.wheelDelta || e.detail;
@@ -613,7 +629,16 @@ export default function CircularGallery({
 
   return (
     <div
-      className={`w-full h-full overflow-hidden ${disableInternalEvents ? '' : 'cursor-grab active:cursor-grabbing'}`}
-      ref={containerRef} />
+      className={`w-full h-full overflow-hidden ${disableInternalEvents ? '' : 'cursor-pointer active:cursor-grabbing'}`}
+      ref={containerRef}
+      onClick={() => {
+        if (appRef.current && appRef.current.medias) {
+          const clicked = appRef.current.medias.find(m => m.isHovered);
+          if (clicked && clicked.link) {
+            window.open(clicked.link, '_blank', 'noopener,noreferrer');
+          }
+        }
+      }}
+    />
   );
 }

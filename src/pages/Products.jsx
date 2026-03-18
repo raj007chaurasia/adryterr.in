@@ -6,48 +6,47 @@ import Footer from '../components/common/Footer';
 
 const productsData = [
     {
-        title: "Enterprise CRM",
-        description: "Streamline your sales pipelines, manage client relationships effortlessly, and drive revenue growth with our modular and robust CRM ecosystem dashboards.",
-        image: "/images/service_ai_product.png", // placeholder or using existing
+        title: "Smart CRM Software",
+        description: "Manage your leads, track sales, and automate your workflow with our powerful CRM software designed for growing businesses.",
+        image: "/images/p1.png", // placeholder or using existing
         items: [
+            "Lead Management",
             "Sales Pipeline Tracking",
-            "Contact Management & Log",
-            "Lead Scoring & Automation",
-            "Performance Reporting Analytics",
-            "Third-Party App Integrations",
-            "User Roles & Permissions"
+            "Automated Follow-ups",
+            "Reports & Analytics",
+            "User Roles & Permissions",
+            "WhatsApp & API Integration"
         ],
         toolIcons: ["react", "nextdotjs", "firebase", "tailwindcss", "docker"],
         glowColor: "rgba(6, 182, 212, 0.12)", // Cyan
         visitLink: "#"
     },
     {
-        title: "School Management Suite",
-        description: "A complete educational platform designed to simplify academic administration, connect parents with teachers, and streamline student lifecycle management safely.",
-        image: "/images/service_mobile_app.png",
+        title: "Smart School Management System for Schools",
+        description: "Our School Management Software in Gwalior helps schools manage attendance, fees, exams, and communication in one platform. It simplifies daily operations, saves time, and improves overall efficiency.",
+        image: "/images/p2.png",
         items: [
-            "Student Attendance & Grading",
-            "Timetable & Exam Scheduler",
-            "Parent-Teacher Portal",
-            "Fee Collection & Billing",
-            "Library & Asset Management",
-            "Noticeboard Announcements"
+            "Student Attendance & Grading System",
+            "Timetable & Exam Management",
+            "Parent-Teacher Communication Portal",
+            "Fee Management & Billing Software",
+            "Library & Asset Management System",
+            "Noticeboard & Announcement System"
         ],
         toolIcons: ["react", "nextdotjs", "firebase", "tailwindcss", "android"],
         glowColor: "rgba(244, 63, 94, 0.12)", // Rose
         visitLink: "#"
     },
     {
-        title: "Hospital ERP Systems",
-        description: "Highly secure healthcare solutions to manage patient records, simplify OPD/IPD workflows, and optimize billing with zero friction operations frameworks.",
-        image: "/images/service_web_design.png",
+        title: "Smart Hospital ERP System for Clinics & Hospitals",
+        description: "Our Hospital Management Software in Gwalior helps hospitals and clinics manage patient records, appointments, billing, and operations efficiently. It reduces manual work, improves accuracy, and streamlines healthcare processes.",
+        image: "/images/p3.png",
         items: [
-            "Electronic Health Records (EHR)",
-            "OPD/IPD Admissions Manager",
-            "Doctor Scheduling & Appointments",
+            "OPD/IPD Patient Management",
+            "Doctor Appointment Scheduling",
             "Billing & Claims Management",
-            "Pharmacy & Inventory Control",
-            "Lab Test Report Integration"
+            "Pharmacy & Inventory Management",
+            "Lab Test & Report Management"
         ],
         toolIcons: ["react", "nextdotjs", "postgresql", "docker", "aws"],
         glowColor: "rgba(16, 185, 129, 0.12)", // Emerald
@@ -84,8 +83,7 @@ const Products = () => {
                     </h1>
 
                     <p className="text-gray-400 text-sm md:text-lg max-w-2xl mx-auto font-medium leading-relaxed">
-                        Scale your operations with automated enterprise ecosystems and high performance dashboards layouts.
-                    </p>
+                        Explore our ready-to-use software solutions designed to automate your business, improve efficiency, and drive growth.                    </p>
                 </motion.div>
 
                 {/* Products Section Grid Layout */}

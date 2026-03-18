@@ -60,11 +60,11 @@ const ServiceCard = ({
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(204,0,204,0.15)_0%,transparent_70%)] pointer-events-none" />
 
                 {/* Collage Wrapper */}
-                <div className="absolute top-10 md:top-14 lg:top-16 transform filter drop-shadow-[0_15px_35px_rgba(0,0,0,0.7)] group-hover:scale-[1.03] duration-700 transition-transform">
+                <div className="relative transform filter drop-shadow-[0_15px_35px_rgba(0,0,0,0.7)] group-hover:scale-[1.03] duration-700 transition-transform p-4">
                     <img
                         src={image}
                         alt={title}
-                        className="w-full h-auto max-w-[360px] md:max-w-[420px] lg:max-w-[440px] object-bottom object-contain pointer-events-none select-none"
+                        className="w-full h-auto max-w-[380px] md:max-w-[440px] lg:max-w-[460px] object-contain pointer-events-none select-none"
                     />
                 </div>
 
@@ -151,7 +151,7 @@ const ServiceCard = ({
                                 className="inline-flex items-center justify-center gap-2 px-5 py-2 rounded-full bg-[#cc00cc] hover:bg-[#b300b3] text-white text-sm font-semibold transition-all duration-300 shadow-[0_4px_12px_-2px_rgba(204,0,204,0.3)] hover:shadow-[0_6px_16px_rgba(204,0,204,0.4)] cursor-pointer w-full sm:w-auto"
                                 onClick={(e) => e.stopPropagation()}
                             >
-                                <span>Visit</span>
+                                <span>Get Demo</span>
                                 <svg className="w-4 h-4 translate-y-[0.5px]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                 </svg>

@@ -69,16 +69,16 @@ const AboutPartner = () => {
                  
 
                     {/* Dynamic Heading */}
-                    <motion.h2 variants={itemVariants} className="text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-sans font-bold tracking-tighter leading-[1.15] mb-6 lg:mb-8 text-white">
-                        Your Go-To Partner For <br className="hidden lg:block" />
-                        Impactful Designs To Create <br className="hidden lg:block" />
+                    <motion.h2 variants={itemVariants} className="text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-sans font-bold tracking-tighter leading-[1.15] mr-2 mb-6 lg:mb-8 text-white">
+                      Building   <br className="hidden lg:block" />
+                       
                         <span 
                             className="font-playfair italic font-black text-[#cc00cc] drop-shadow-[0_0_20px_rgba(204,0,204,0.3)] pr-1" 
                             style={{ fontFamily: "'Playfair Display', serif" }}
                         >
-                            Apps & Websites
+                             Apps, Websites & AI Solutions 
                         </span>
-                        For Business Success!
+                        That Drive Real Business Growth
                     </motion.h2>
 
                     {/* CTA Button */}

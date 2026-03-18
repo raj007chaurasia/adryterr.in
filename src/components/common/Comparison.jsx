@@ -99,8 +99,8 @@ export default function Comparison() {
             transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
             className="text-3xl md:text-7xl font-bold text-white tracking-tighter mb-4 md:mb-6 leading-tight"
           >
-            AdRyter's <br className="md:hidden" />
-            <span className="italic font-serif font-light text-white/90">Alternative?</span>
+           Why Choose <br className="md:hidden" />
+            <span className="italic font-serif font-light text-white/90">AdRyter ?</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -109,7 +109,7 @@ export default function Comparison() {
             transition={{ delay: 0.2, duration: 1, ease: [0.16, 1, 0.3, 1] }}
             className="text-lg md:text-2xl font-medium text-gray-400 tracking-tight max-w-2xl mx-auto"
           >
-            Why settle for standard when you can have <span className="text-white">Exceptional.</span>
+            Why settle for average when you can get high-performance websites, apps, and AI automation that actually grow your business?
           </motion.p>
         </div>
 

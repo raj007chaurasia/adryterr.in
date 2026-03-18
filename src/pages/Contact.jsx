@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, ArrowUpRight } from "lucide-react";
@@ -8,6 +8,27 @@ import Footer from "../components/common/Footer";
 
 const ContactPage = () => {
   const location = useLocation();
+  const videoRef = useRef(null);
+
+  const handleMouseEnter = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = false; 
+      videoRef.current.play().catch(err => {
+        console.warn("Autoplay block protection:", err);
+        if (videoRef.current) {
+           videoRef.current.muted = true;
+           videoRef.current.play();
+        }
+      });
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (videoRef.current) {
+      videoRef.current.pause();
+      videoRef.current.muted = true;
+    }
+  };
 
   useEffect(() => {
     if (location.hash === '#contact-form') {
@@ -60,29 +81,34 @@ const ContactPage = () => {
                 </div>
              </div>
 
-             {/* Right Side: Featured Media/Video Placeholder */}
+             {/* Right Side: Featured Media/Video Container */}
              <motion.div
+               onMouseEnter={handleMouseEnter}
+               onMouseLeave={handleMouseLeave}
                initial={{ opacity: 0, scale: 0.95, rotate: 2 }}
                animate={{ opacity: 1, scale: 1, rotate: 0 }}
                transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-               className="relative group"
+               className="relative group cursor-pointer"
              >
                <div className="absolute -inset-1 bg-linear-to-r from-[#660066]/20 to-[#cc00cc]/20 rounded-[40px] blur-2xl opacity-50 group-hover:opacity-100 transition duration-1000"></div>
                <div className="relative aspect-square md:aspect-video lg:aspect-square xl:aspect-video rounded-[40px] overflow-hidden border border-white/10 bg-zinc-900 shadow-2xl">
-                 <img 
-                   src="/brain/58804da5-aa58-49d9-b97d-69d84c38bfd8/contact_header_visual_1773394132037.png" 
-                   alt="Featured Media" 
-                   className="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-1000"
+                 <video 
+                   ref={videoRef}
+                   src="/videos/v1.mp4" 
+                   className="w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-1000"
+                   playsInline
+                   loop
+                   muted={true}
                  />
-                 <div className="absolute inset-0 flex items-center justify-center">
+                 {/* Play Button Overlay (Hidden on Hover) */}
+                 <div className="absolute inset-0 flex items-center justify-center group-hover:opacity-0 opacity-100 transition-opacity duration-500 pointer-events-none z-10">
                     <motion.div 
-                      whileHover={{ scale: 1.1 }}
-                      className="w-20 h-20 rounded-full bg-white/10 backdrop-blur-xl border border-white/20 flex items-center justify-center group/play cursor-pointer shadow-2xl"
+                      className="w-20 h-20 rounded-full bg-white/10 backdrop-blur-xl border border-white/20 flex items-center justify-center shadow-2xl relative"
                     >
-                      <div className="w-0 h-0 border-t-10 border-t-transparent border-l-18 border-l-white border-b-10 border-b-transparent translate-x-1" />
+                      <div className="absolute -inset-2 rounded-full border border-[#cc00cc]/30 animate-ping opacity-75" />
+                      <div className="w-0 h-0 border-t-[10px] border-t-transparent border-l-[16px] border-l-white border-b-[10px] border-b-transparent translate-x-[1px]" />
                     </motion.div>
                  </div>
-
                </div>
              </motion.div>
            </div>
@@ -92,18 +118,9 @@ const ContactPage = () => {
              {/* Left: Contact Info */}
              <div className="lg:col-span-4 space-y-16">
                <div className="space-y-12">
-                 <InfoGroup title="General" value="hello@adryter.in" href="mailto:hello@adryter.in" />
-                 <InfoGroup title="Phone" value="+91 98765 43210" href="tel:+919876543210" />
-                 <InfoGroup title="Studio" value="3rd floor, Madhav Plaza, T-23, Jinsi Rd Number 2, Lohiya Bazaar, Gwalior, Madhya Pradesh 474001" />
-               </div>
-
-               <div className="pt-8">
-                 <p className="text-[10px] uppercase tracking-[0.4em] text-gray-600 font-black mb-6">Socials</p>
-                 <div className="flex gap-8">
-                   {['Instagram', 'LinkedIn', 'Twitter'].map((social) => (
-                     <a key={social} href="#" className="text-xs font-bold text-white/40 hover:text-white transition-colors">{social}</a>
-                   ))}
-                 </div>
+                 <InfoGroup title="General" value="info@adryter.in" href="mailto:info@adryter.in" />
+                 <InfoGroup title="Phone" value="+91-7738538548" href="tel:+917738538548" />
+                 <InfoGroup title="Studio" value="T-23, 3rd floor, Madhav Plaza, Jinsi Rd Number 2, Lohiya Bazaar, Gwalior, Madhya Pradesh 474001" />
                </div>
              </div>
 
@@ -137,7 +154,7 @@ const ContactPage = () => {
         >
           <iframe
               title="Studio Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3579.5447101851!2d78.1691236!3d26.2111394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3976c69814524c9d%3A0xe5412fd17c768910!2sJinsi%20Rd%20Number%202%2C%20Madhoganj%2C%20Lohiya%20Bazaar%2C%20Gwalior%2C%20Madhya%20Pradesh%20474001!5e0!3m2!1sen!2sin!4v1710325000000!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28639.486577773478!2d78.11697721481325!3d26.198765903289722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3976c537e465de89%3A0xeeb6d9039fcd5545!2sAdryter%20Advertising!5e0!3m2!1sen!2sin!4v1773838690164!5m2!1sen!2sin"
               width="100%"
               height="100%"
               style={{ border: 0, filter: "grayscale(.5) invert(90%) hue-rotate(180deg) brightness(0.8) contrast(1.2)" }}
@@ -152,7 +169,7 @@ const ContactPage = () => {
              </div>
              <div>
                <p className="text-[10px] text-gray-500 font-black uppercase tracking-widest mb-0.5">Base Studio</p>
-               <span className="text-sm text-white font-bold">3rd floor, Madhav Plaza, T-23, Jinsi Rd Number 2, Lohiya Bazaar, Gwalior, Madhya Pradesh 474001</span>
+               <span className="text-sm text-white font-bold">T-23, 3rd floor, Madhav Plaza, Jinsi Rd Number 2, Lohiya Bazaar, Gwalior, Madhya Pradesh 474001</span>
              </div>
            </div>
         </motion.div>

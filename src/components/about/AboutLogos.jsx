@@ -3,31 +3,131 @@ import { motion } from 'framer-motion';
 import LogoLoop from '../LogoLoop';
 
 const partnersRow1 = [
-    { src: 'https://cdn.magicui.design/companies/Stripe.svg', alt: 'Stripe' },
-    { src: 'https://cdn.magicui.design/companies/Netflix.svg', alt: 'Netflix' },
-    { src: 'https://cdn.magicui.design/companies/Google.svg', alt: 'Google' },
-    { src: 'https://cdn.magicui.design/companies/Amazon.svg', alt: 'Amazon' },
-    { src: 'https://cdn.magicui.design/companies/Airbnb.svg', alt: 'Airbnb' },
-    { src: 'https://cdn.magicui.design/companies/Slack.svg', alt: 'Slack' },
+
+{
+      image: '/images/patner1.png',
+      link: 'https://www.itmuniversity.ac.in/',
+      alt:'itmuniversity'
+    },
+    {
+        image: '/images/patner2.png',
+        link: 'http://www.venuspublicschool.org/',
+        alt:'venuspublicschool'
+       
+    },
+    {
+        image: '/images/patner8.png',
+        link: 'https://forgewellmetal.com/',
+        alt:'forgewellmetal'
+    },
+    {
+        image: '/images/patner9.png',
+        link: 'https://lipibanerjee.com/',
+        alt:'lipibanerjee'
+    },
+    {
+        image: '/images/patner10.png',
+        link: 'https://draashiketsable.com/',
+        alt:'draashiketsable'
+    },
+
+    {
+          image: '/images/patner6.webp',
+          link: 'https://pedneuro.in/',
+          alt:' pedneuro'
+        
+    },
+    { image: '/images/patner7.jpeg',
+        link: 'https://celagenex.com/',
+        alt:'celagenex'
+    },
+    {
+        image: '/images/patner3.png',
+        link: 'https://www.edukulclasses.com/',
+        alt:'edukulclasses'
+    },
+    {
+        image: '/images/patner4.png',
+        link:"https://oxfordpublicschool.net/",
+        alt:'oxfordpublicschool'
+    },
+    {
+        image: '/images/patner5.png',
+        link:"https://royalmilestoneresorts.com/",
+        alt:'royalmilestoneresorts'
+        
+    },
+    
 ];
 
 const partnersRow2 = [
-    { src: 'https://cdn.magicui.design/companies/Stripe.svg', alt: 'Stripe' },
-    { src: 'https://cdn.magicui.design/companies/Netflix.svg', alt: 'Netflix' },
-    { src: 'https://cdn.magicui.design/companies/Google.svg', alt: 'Google' },
-    { src: 'https://cdn.magicui.design/companies/Amazon.svg', alt: 'Amazon' },
-    { src: 'https://cdn.magicui.design/companies/Airbnb.svg', alt: 'Airbnb' },
-    { src: 'https://cdn.magicui.design/companies/Slack.svg', alt: 'Slack' },
+  {
+          image: '/images/patner6.webp',
+          link: 'https://pedneuro.in/',
+          alt:' pedneuro'
+        
+    },
+    { image: '/images/patner7.jpeg',
+        link: 'https://celagenex.com/',
+        alt:'celagenex'
+    },
+    {
+        image: '/images/patner3.png',
+        link: 'https://www.edukulclasses.com/',
+        alt:'edukulclasses'
+    },
+    {
+        image: '/images/patner4.png',
+        link:"https://oxfordpublicschool.net/",
+        alt:'oxfordpublicschool'
+    },
+    {
+        image: '/images/patner5.png',
+        link:"https://royalmilestoneresorts.com/",
+        alt:'royalmilestoneresorts'
+        
+    },
+    {
+      image: '/images/patner1.png',
+      link: 'https://www.itmuniversity.ac.in/',
+      alt:'itmuniversity'
+    },
+    {
+        image: '/images/patner2.png',
+        link: 'http://www.venuspublicschool.org/',
+        alt:'venuspublicschool'
+       
+    },
+    {
+        image: '/images/patner8.png',
+        link: 'https://forgewellmetal.com/',
+        alt:'forgewellmetal'
+    },
+    {
+        image: '/images/patner9.png',
+        link: 'https://lipibanerjee.com/',
+        alt:'lipibanerjee'
+    },
+    {
+        image: '/images/patner10.png',
+        link: 'https://draashiketsable.com/',
+        alt:'draashiketsable'
+    },
 ];
 
 const PartnerCard = ({ partner }) => (
-    <div className="flex items-center justify-center bg-white/5 backdrop-blur-sm rounded-2xl p-6 h-28 w-48 mx-4 border border-white/5 hover:border-[#cc00cc]/30 transition-all duration-500 group">
+    <a 
+        href={partner.link} 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="flex items-center justify-center bg-white/5 backdrop-blur-sm rounded-2xl p-4 h-28 w-48 mx-4 border border-white/5 hover:border-[#cc00cc]/30 transition-all duration-500 group cursor-pointer"
+    >
         <img 
-            src={partner.src} 
+            src={partner.image} 
             alt={partner.alt} 
-            className="h-10 w-auto object-contain  opacity-60  group-hover:opacity-100 transition-all duration-500 invert-[0.8]"
+            className="h-14 w-auto object-contain opacity-70 group-hover:opacity-100 transition-all duration-500"
         />
-    </div>
+    </a>
 );
 
 const AboutLogos = () => {
@@ -58,14 +158,14 @@ const AboutLogos = () => {
                         transition={{ delay: 0.1 }}
                         className="text-3xl md:text-5xl lg:text-7xl font-sans font-bold tracking-tighter leading-[1.1] text-white max-w-4xl mx-auto"
                     >
-                        Collaborating with Ambitious <br />
+                       Trusted by Startups & Businesses 
                         <span 
-                            className="font-playfair italic font-black text-[#cc00cc] pr-1" 
+                            className="font-playfair italic font-black text-[#cc00cc] pl-4 " 
                             style={{ fontFamily: "'Playfair Display', serif" }}
                         >
-                            Startups And Industry
+                           in Gwalior
                         </span> <br />
-                        Titans Alike
+                       
                     </motion.h2>
                 </div>
 

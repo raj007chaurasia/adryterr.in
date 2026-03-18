@@ -3,7 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { MapPin, Phone, Mail } from "lucide-react";
-import { FiInstagram, FiLinkedin, FiTwitter, FiFacebook } from "react-icons/fi";
+import { FiInstagram, FiLinkedin, FiTwitter, FiFacebook, FiYoutube } from "react-icons/fi";
 
 
 
@@ -73,8 +73,7 @@ export default function Locations() {
                 </h4>
                 <div className="relative z-10 space-y-4 text-gray-400 text-xs md:text-sm font-medium leading-relaxed flex-1 flex flex-col justify-center">
                   <p className="opacity-90 max-w-[280px]">
-                    3rd floor, Madhav Plaza, T-23, Jinsi Rd Number 2, Lohiya Bazaar, Gwalior, Madhya Pradesh 474001
-                  </p>
+T-23, 3rd floor, Madhav Plaza, Jinsi Rd Number 2, Lohiya Bazaar, Gwalior, Madhya Pradesh 474001                  </p>
                 </div>
               </div>
             </motion.div>
@@ -104,7 +103,7 @@ export default function Locations() {
                       <Phone className="w-3.5 h-3.5 text-[#cc00cc]" />Number
                     </p>
                     <a href="tel:07738538548" className="opacity-80 hover:text-[#cc00cc] hover:opacity-100 transition-all duration-300">
-                      077385 38548
+                     +91-7738538548 <br />
                     </a>
                   </div>
 
@@ -114,7 +113,7 @@ export default function Locations() {
                       <Mail className="w-3.5 h-3.5 text-[#cc00cc]" />Email
                     </p>
                     <a href="mailto:hello@adryter.in" className="opacity-80 hover:text-[#cc00cc] hover:opacity-100 transition-all duration-300">
-                      hello@adryter.in
+                      info@adryter.in
                     </a>
                   </div>
                 </div>
@@ -142,7 +141,8 @@ export default function Locations() {
                 <div className="relative z-10 flex items-center justify-center gap-5">
                   {/* LinkedIn */}
                   <motion.a 
-                    href="#" 
+                    href="http://linkedin.com/company/adryter-advertising" 
+                    target="_blank"
                     whileHover={{ y: -4, scale: 1.1 }}
                     className="w-11 h-11 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 hover:border-[#0077b5]/30 shadow-[0_4px_15px_-3px_rgba(0,119,181,0.05)] hover:shadow-[0_4px_25px_-3px_rgba(0,119,181,0.2)] transition-all duration-300 group relative overflow-hidden backdrop-blur-sm"
                   >
@@ -152,7 +152,8 @@ export default function Locations() {
 
                   {/* Instagram */}
                   <motion.a 
-                    href="#" 
+                    href="https://www.instagram.com/adryter_advvertising" 
+                    target="_blank"
                     whileHover={{ y: -4, scale: 1.1 }}
                     className="w-11 h-11 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 hover:border-[#ff0066]/30 shadow-[0_4px_15px_-3px_rgba(255,0,102,0.05)] hover:shadow-[0_4px_25px_-3px_rgba(255,0,102,0.2)] transition-all duration-300 group relative overflow-hidden backdrop-blur-sm"
                   >
@@ -160,21 +161,21 @@ export default function Locations() {
                     <FiInstagram className="w-5 h-5 text-gray-400 group-hover:text-[#ff0066] transition-colors duration-300" />
                   </motion.a>
 
-                  {/* Twitter / X */}
+                  {/* Youtube */}
                   <motion.a 
-                    href="#" 
+                    href="https://www.youtube.com/@AdRyterAdvvertising" 
+                    target="_blank"
                     whileHover={{ y: -4, scale: 1.1 }}
-                    className="w-11 h-11 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 hover:border-white/30 shadow-[0_4px_15px_-3px_rgba(255,255,255,0.05)] hover:shadow-[0_4px_25px_-3px_rgba(255,255,255,0.2)] transition-all duration-300 group relative overflow-hidden backdrop-blur-sm"
+                    className="w-11 h-11 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 hover:border-[#ff0000]/30 shadow-[0_4px_15px_-3px_rgba(255,0,0,0.05)] hover:shadow-[0_4px_25px_-3px_rgba(255,0,0,0.2)] transition-all duration-300 group relative overflow-hidden backdrop-blur-sm"
                   >
-                    <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                    <svg className="w-4 h-4 transition-colors duration-300 text-gray-400 group-hover:text-white" viewBox="0 0 24 24">
-                      <path fill="currentColor" d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/>
-                    </svg>
+                    <div className="absolute inset-0 bg-[#ff0000]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <FiYoutube className="w-5 h-5 text-gray-400 group-hover:text-[#ff0000] transition-colors duration-300" />
                   </motion.a>
 
                   {/* Facebook */}
                   <motion.a 
-                    href="#" 
+                    href="https://www.facebook.com/adryteradvertising" 
+                    target="_blank"
                     whileHover={{ y: -4, scale: 1.1 }}
                     className="w-11 h-11 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 hover:border-[#1877f2]/30 shadow-[0_4px_15px_-3px_rgba(24,119,242,0.05)] hover:shadow-[0_4px_25px_-3px_rgba(24,119,242,0.2)] transition-all duration-300 group relative overflow-hidden backdrop-blur-sm"
                   >

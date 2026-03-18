@@ -13,11 +13,11 @@ const FOOTER_LINKS = [
   },
   {
     title: "Services",
-    links: ["UI/UX Design", "Web Design", "Logo & Branding", "Webflow Design", "Framer Design"],
+    links: ["Website Development","App Development","Custom Software","AI Automation","UI/UX DESIGN "],
   },
   {
     title: "Specialized Industry",
-    links: ["Fintech Industry", "Healthcare & Fitness Industry", "Edtech Industry", "Cybersecurity Industry", "Company Deck"],
+    links: ["Smart CRM Software", "Smart School Management System for Schools", "Smart Hospital ERP System for Clinics & Hospitals"],
   },
  
 ];
@@ -43,27 +43,26 @@ export default function Footer() {
                 </h4>
                 <ul className="space-y-4">
                   {section.links.map((link, lIdx) => {
-                    const isRouterLink = ["Blogs", "Contact Us", "About Us", "Products"].includes(link);
-                    const linkPath = link === "Blogs" ? "/blogs" : link === "Contact Us" ? "/contact" : link === "About Us" ? "/about" : "/products";
+                    const linkPath = section.title === "Services" 
+                      ? "/services" 
+                      : section.title === "Specialized Industry" 
+                        ? "/products" 
+                        : {
+                            "Contact Us": "/contact",
+                            "About Us": "/about",
+                            "Products": "/products",
+                            "Services": "/services",
+                            "Blogs": "/blogs"
+                          }[link] || "#";
 
                     return (
                       <li key={lIdx}>
-                        {isRouterLink ? (
-                          <Link
-                            to={linkPath}
-                            className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center gap-1 group w-fit"
-                          >
-                            <span className="text-sm font-medium">{link}</span>
-                          </Link>
-                        ) : (
-                          <a
-                            href="#"
-                            className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center gap-1 group w-fit"
-                          >
-                            <span className="text-sm font-medium">{link}</span>
-                           
-                          </a>
-                        )}
+                        <Link
+                          to={linkPath}
+                          className="text-gray-400 hover:text-white transition-colors duration-300 flex items-center gap-1 group w-fit"
+                        >
+                          <span className="text-sm font-medium">{link}</span>
+                        </Link>
                       </li>
                     );
                   })}
@@ -77,17 +76,17 @@ export default function Footer() {
      
         {/* Bottom Section: Legal & Copyright */}
         <div className="lg:pt-4 flex flex-col md:flex-row items-center justify-center gap-6 lg:gap-30 border-t border-white/5">
-          <a href="#" className="text-xs font-bold text-gray-500 hover:text-white transition-colors uppercase tracking-widest">
+          <Link to="/terms" className="text-xs font-bold text-gray-500 hover:text-white transition-colors uppercase tracking-widest">
             Terms & Conditions
-          </a>
+          </Link>
           
           <p className="text-xs text-center font-bold text-gray-600 uppercase tracking-widest">
             © 2026, AdRyter, All Rights Reserved.
           </p>
 
-          <a href="#" className="text-xs font-bold text-gray-500 hover:text-white transition-colors uppercase tracking-widest">
+          <Link to="/privacy" className="text-xs font-bold text-gray-500 hover:text-white transition-colors uppercase tracking-widest">
             Privacy Policy
-          </a>
+          </Link>
         </div>
 
         {/* Massive Brand Finish - Layered Styling */}

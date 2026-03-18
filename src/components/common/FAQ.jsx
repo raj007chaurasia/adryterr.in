@@ -6,24 +6,28 @@ import { cn } from "@/lib/utils";
 
 const FAQ_DATA = [
   {
-    question: "What services do you provide?",
-    answer: "We offer end-to-end digital solutions including custom Web Development (SaaS, Enterprise Portals), App Engineering (iOS & Android), and AI-driven workflow automation. Our focus is on high-performance, premium design, and scalable architecture."
+    question: "Which is the best software development company in Gwalior?",
+    answer: "AdRyter is considered one of the best software development companies in Gwalior, offering website development, mobile app development, custom software, and AI automation solutions for businesses of all sizes."
   },
   {
-    question: "How long does a typical project take?",
-    answer: "Timelines vary depending on complexity. A dedicated landing page can take 2-3 weeks, while complex SaaS platforms or mobile apps typically range from 8-12 weeks. We follow an agile process with regular updates."
+    question: "What makes AdRyter different from other development companies?",
+    answer: "Unlike traditional agencies, we focus on business results, not just development. We build websites and apps that generate leads, automate processes, and help businesses grow faster."
   },
   {
-    question: "Do you offer maintenance and support?",
-    answer: "Yes, we providing ongoing support and maintenance packages to ensure your platform remains secure, up-to-date, and optimized for performance after launch."
+    question: "Do you build websites that actually generate leads?",
+    answer: "Yes, we don’t just design websites — we create conversion-focused websites that are optimized for SEO, speed, and user experience to generate real leads and sales."
   },
   {
-    question: "Can you help with rebranding or existing projects?",
-    answer: "Absolutely. We specialize in audits and 'rescue' missions for existing projects, as well as complete brand overhauls that align with modern design standards and user expectations."
+    question: "Can I automate my business using AI?",
+    answer: "Absolutely. We provide AI automation services in Gwalior including chatbots, lead automation, and workflow automation to reduce manual work and increase efficien"
   },
   {
-    question: "What is your pricing model?",
-    answer: "We offer both project-based fixed pricing and flexible monthly retainer models (AdRyter Premium). Retainers are ideal for ongoing design and development needs, providing high-quality output without the overhead of in-house hiring."
+    question: "Is website development important for local businesses in Gwalior?",
+    answer: "Yes, having a professional website helps local businesses in Gwalior: Get more customers online, Build trust and credibility, Rank on Google search"
+  },
+  {
+    question: " How do I choose the right website development company in Gwalior?",
+    answer: "Look for: Experience & past work, SEO-friendly development, Fast delivery, Ongoing support"
   }
 ];
 
@@ -46,7 +50,7 @@ const FAQItem = ({ item, isOpen, toggle }) => {
           {item.question}
         </span>
         <div className={cn(
-          "w-10 h-10 rounded-full border border-white/10 flex items-center justify-center transition-all duration-500",
+          "w-10 h-10 shrink-0 rounded-full border border-white/10 flex items-center justify-center transition-all duration-500",
           isOpen ? "bg-[#660066] border-[#660066] rotate-180" : "group-hover:border-white/20"
         )}>
           <ChevronDown className={cn(
@@ -120,7 +124,7 @@ export default function FAQ() {
             transition={{ delay: 0.2 }}
             className="text-gray-400 text-lg md:text-xl font-medium mt-8"
           >
-            Everything you need to know about our process and how we help brands scale to new heights.
+          Everything you need to know about our services, process, pricing, and how we help businesses grow with technology.
           </motion.p>
         </div>
 

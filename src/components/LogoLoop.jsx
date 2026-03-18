@@ -170,6 +170,8 @@ export const LogoLoop = memo(({
   const [copyCount, setCopyCount] = useState(ANIMATION_CONFIG.MIN_COPIES);
   const [isHovered, setIsHovered] = useState(false);
 
+
+
   const effectiveHoverSpeed = useMemo(() => {
     if (hoverSpeed !== undefined) return hoverSpeed;
     if (pauseOnHover === true) return 0;
@@ -178,6 +180,12 @@ export const LogoLoop = memo(({
   }, [hoverSpeed, pauseOnHover]);
 
   const isVertical = direction === 'up' || direction === 'down';
+
+  const animationId = useMemo(() => `loop-${Math.random().toString(16).slice(2, 6)}`, []);
+  const duration = isVertical 
+    ? seqHeight / Math.abs(speed || 1) 
+    : seqWidth / Math.abs(speed || 1);
+  const isReverse = direction === 'right' || direction === 'down';
 
   const targetVelocity = useMemo(() => {
     const magnitude = Math.abs(speed);
@@ -224,15 +232,7 @@ export const LogoLoop = memo(({
 
   useImageLoader(seqRef, updateDimensions, [logos, gap, logoHeight, isVertical]);
 
-  useAnimationLoop(
-    trackRef,
-    targetVelocity,
-    seqWidth,
-    seqHeight,
-    isHovered,
-    effectiveHoverSpeed,
-    isVertical
-  );
+  // useAnimationLoop disabled for hardware accelerated CSS animations
 
   const cssVariables = useMemo(() => ({
     '--logoloop-gap': `${gap}px`,
@@ -375,6 +375,27 @@ export const LogoLoop = memo(({
       aria-label={ariaLabel}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}>
+      
+      {/* Hardware Accel Smoothness CSS Loop */}
+      {((isVertical && seqHeight > 0) || (!isVertical && seqWidth > 0)) && (
+        <style>
+          {`
+            @keyframes ${animationId} {
+              0% { transform: translate3d(0, 0, 0); }
+              100% { transform: translate3d(${isVertical ? `0, -${seqHeight}px, 0` : `-${seqWidth}px, 0, 0`}); }
+            }
+            .${animationId}-track {
+              animation: ${animationId} ${duration}s linear infinite !important;
+              ${isReverse ? 'animation-direction: reverse !important;' : ''}
+              will-change: transform;
+            }
+            .${animationId}-track:hover {
+              ${pauseOnHover ? 'animation-play-state: paused !important;' : ''}
+            }
+          `}
+        </style>
+      )}
+
       {fadeOut && (
         <>
           {isVertical ? (
@@ -416,9 +437,10 @@ export const LogoLoop = memo(({
       )}
       <div
         className={cx(
-          'flex will-change-transform select-none relative z-0',
+          'flex select-none relative z-0',
           'motion-reduce:transform-none',
-          isVertical ? 'flex-col h-max w-full' : 'flex-row w-max'
+          isVertical ? 'flex-col h-max w-full' : 'flex-row w-max',
+          ((isVertical && seqHeight > 0) || (!isVertical && seqWidth > 0)) && `${animationId}-track`
         )}
         ref={trackRef}
         onMouseEnter={handleMouseEnter}

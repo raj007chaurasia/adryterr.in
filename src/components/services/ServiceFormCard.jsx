@@ -27,13 +27,36 @@ const ServiceFormCard = () => {
 
     const validate = () => {
         const newErrors = {};
-        if (!formData.name.trim()) newErrors.name = 'Name is required';
+        
+        if (!formData.name.trim()) {
+            newErrors.name = 'Name is required';
+        } else if (formData.name.trim().length < 2) {
+            newErrors.name = 'Name must be at least 2 characters';
+        }
+
         if (!formData.email.trim()) {
             newErrors.email = 'Email is required';
         } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
             newErrors.email = 'Invalid email address';
         }
-        if (!formData.details.trim()) newErrors.details = 'Project details are required';
+
+        const phoneClean = formData.whatsapp.trim().replace(/[-\s]/g, '');
+        if (!phoneClean) {
+            newErrors.whatsapp = 'WhatsApp number is required';
+        } else if (!/^\d{10}$/.test(phoneClean)) {
+            newErrors.whatsapp = 'Invalid number (10 digits required)';
+        }
+
+        if (!formData.subject.trim()) {
+            newErrors.subject = 'Subject is required';
+        }
+
+        if (!formData.details.trim()) {
+            newErrors.details = 'Project details are required';
+        } else if (formData.details.trim().length < 10) {
+            newErrors.details = 'Message should be at least 10 characters';
+        }
+
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
     };
@@ -131,7 +154,7 @@ const ServiceFormCard = () => {
                         </div>
                         <div>
                             <p className="text-xs text-gray-500 font-semibold uppercase tracking-wider mb-0.5">Email Us</p>
-                            <a href="mailto:contact@adryter.in" className="text-white text-base font-bold hover:text-[#cc00cc] transition-colors">contact@adryter.in</a>
+                            <a href="mailto:contact@adryter.in" className="text-white text-base font-bold hover:text-[#cc00cc] transition-colors">info@adryter.in</a>
                         </div>
                     </div>
 
@@ -141,7 +164,7 @@ const ServiceFormCard = () => {
                         </div>
                         <div>
                             <p className="text-xs text-gray-500 font-semibold uppercase tracking-wider mb-0.5">Call / WhatsApp</p>
-                            <a href="https://wa.me/911234567890" target="_blank" rel="noopener noreferrer" className="text-white text-base font-bold hover:text-[#cc00cc] transition-colors">+91 12345 67890</a>
+                            <a href="https://wa.me/917738538548" target="_blank" rel="noopener noreferrer" className="text-white text-base font-bold hover:text-[#cc00cc] transition-colors">+91-7738538548</a>
                         </div>
                     </div>
                 </div>
@@ -211,8 +234,9 @@ const ServiceFormCard = () => {
                                         value={formData.whatsapp} 
                                         onChange={handleChange} 
                                         placeholder="Enter your number" 
-                                        className="px-4 py-3 rounded-xl bg-white/3 border border-white/10 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-[#cc00cc]/50 focus:bg-white/5 transition-all duration-300"
+                                        className={`px-4 py-3 rounded-xl bg-white/3 border ${errors.whatsapp ? 'border-rose-500/50' : 'border-white/10'} text-white placeholder-gray-500 text-sm focus:outline-none focus:border-[#cc00cc]/50 focus:bg-white/5 transition-all duration-300`}
                                     />
+                                    {errors.whatsapp && <p className="text-[10px] text-rose-500 font-medium">{errors.whatsapp}</p>}
                                 </div>
                                 <div className="flex flex-col gap-1.5">
                                     <label className="text-gray-300 text-xs font-semibold tracking-wider uppercase">Subject</label>
@@ -222,8 +246,9 @@ const ServiceFormCard = () => {
                                         value={formData.subject} 
                                         onChange={handleChange} 
                                         placeholder="e.g. New Website" 
-                                        className="px-4 py-3 rounded-xl bg-white/3 border border-white/10 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-[#cc00cc]/50 focus:bg-white/5 transition-all duration-300"
+                                        className={`px-4 py-3 rounded-xl bg-white/3 border ${errors.subject ? 'border-rose-500/50' : 'border-white/10'} text-white placeholder-gray-500 text-sm focus:outline-none focus:border-[#cc00cc]/50 focus:bg-white/5 transition-all duration-300`}
                                     />
+                                    {errors.subject && <p className="text-[10px] text-rose-500 font-medium">{errors.subject}</p>}
                                 </div>
                             </div>
 
@@ -249,7 +274,7 @@ const ServiceFormCard = () => {
                                     <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
                                 ) : (
                                     <>
-                                        Send Proposal
+                                        Send
                                         <Send className="w-4 h-4 transition-transform group-hover:translate-x-1 duration-300" />
                                     </>
                                 )}

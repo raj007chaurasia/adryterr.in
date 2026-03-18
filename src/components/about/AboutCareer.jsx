@@ -40,12 +40,12 @@ const AboutCareer = () => {
                             transition={{ delay: 0.3 }}
                             className="text-4xl md:text-5xl lg:text-6xl font-sans font-black leading-[1.05] tracking-tight mb-4 text-white"
                         >
-                            Want to be a <br />
-                            <span 
+                            Want to Build Your Career in Software Development? <br />
+                            <span
                                 className="font-playfair italic font-medium text-[#cc00cc] drop-shadow-[0_0_20px_rgba(204,0,204,0.3)] pr-2"
                                 style={{ fontFamily: "'Playfair Display', serif" }}
                             >
-                                Monk Like Us?
+                                Join AdRyter Team
                             </span>
                         </motion.h2>
 
@@ -57,8 +57,9 @@ const AboutCareer = () => {
                             transition={{ delay: 0.4 }}
                             className="text-gray-400 text-sm md:text-base lg:text-lg mb-8 max-w-md font-medium leading-relaxed"
                         >
-                            Are you a talented and self-motivated person with a positive vibe? 
-                            If yes, you can be the next member of our Monks family.
+                            We are looking for passionate and talented individuals who want to grow in website development, app development, and AI automation.
+
+                            <br />At AdRyter, you’ll work on real projects, learn fast, and build impactful digital solutions.
                         </motion.p>
 
                         {/* CTA Button */}
@@ -70,10 +71,10 @@ const AboutCareer = () => {
                             className="group relative flex items-center gap-3 px-8 py-4 rounded-2xl bg-linear-to-r from-[#6035d8] to-[#6a1b9a] hover:from-[#7245ec] hover:to-[#8e24aa] text-white font-bold text-sm uppercase tracking-widest transition-all duration-300 shadow-[0_10px_30px_-10px_rgba(96,53,216,0.5)] hover:shadow-[0_15px_40px_-5px_rgba(96,53,216,0.6)] hover:scale-[1.02] active:scale-95 cursor-pointer w-fit"
                         >
                             Join our team
-                            <svg 
-                                className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" 
-                                fill="none" 
-                                stroke="currentColor" 
+                            <svg
+                                className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
+                                fill="none"
+                                stroke="currentColor"
                                 viewBox="0 0 24 24"
                             >
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
@@ -88,11 +89,11 @@ const AboutCareer = () => {
                             whileInView={{ opacity: 1, filter: "blur(0px)", scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.8, delay: 0.3 }}
-                            className="relative md:absolute bottom-0 md:bottom-[-80px] lg:bottom-[-100px] right-0 md:right-[-20px] lg:right-[-40px] w-full max-w-[320px] md:max-w-none md:w-[130%] lg:w-[150%] aspect-square md:aspect-auto flex items-end justify-center md:justify-end"
+                            className="relative md:absolute bottom-0 md:bottom-[-60px] lg:bottom-[-80px] right-0 md:right-[-10px] lg:right-[-20px] w-full max-w-[400px] md:max-w-none md:w-[105%] lg:w-[115%] aspect-square md:aspect-auto flex items-end justify-center md:justify-end"
                         >
-                            <img 
-                                src="/images/about_career_people.png" 
-                                alt="Our Team" 
+                            <img
+                                src="/images/about_career_people.png"
+                                alt="Our Team"
                                 className="w-full h-auto object-bottom object-contain relative z-10 select-none pointer-events-none drop-shadow-[0_20px_40px_rgba(0,0,0,0.8)]"
                             />
                             {/* Purple Glow behind image */}

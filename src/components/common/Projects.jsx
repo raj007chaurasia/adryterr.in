@@ -24,10 +24,11 @@ const Projects = () => {
 
     const projectItems = useMemo(() => {
         const base = [
-            { image: '/images/project-saas.png', text: 'TechFlow SaaS' },
-            { image: '/images/project-ecommerce.png', text: 'Vantage Store' },
-            { image: '/images/project-ai.png', text: 'Nexus AI' },
-            { image: '/images/project-creative.png', text: 'Portfolio' },
+            { image: '/images/image.png', text: 'adryter' ,link:'https://adryter.com/'},
+            { image: '/images/image2.png', text: 'shriradhecollection' ,link:'https://shriradhecollection.com/'},
+            { image: '/images/image3.png', text: 'glory' ,link:'https://glory.shriradhecollection.com/'},
+            { image: '/images/image4.png', text: 'edukul classes' ,link:'https://www.edukulclasses.com/'},
+            { image: '/images/image5.png', text: 'royal milestone resorts' ,link:'https://royalmilestoneresorts.com/'},
         ];
         return base;
     }, []);
@@ -51,7 +52,7 @@ const Projects = () => {
         <section
             ref={sectionRef}
             id="projects"
-            className={`relative ${isMobile ? 'py-20 ' : 'h-[400vh]'} bg-[#030303]`}
+            className={`relative ${isMobile ? 'py-2 ' : 'h-[400vh]'} bg-[#030303]`}
         >
             <div className={`${isMobile ? 'relative' : 'sticky top-0 h-screen'} w-full flex flex-col justify-center items-center overflow-hidden`}>
                 {/* Header Content */}

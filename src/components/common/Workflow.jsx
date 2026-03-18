@@ -43,7 +43,7 @@ const Workflow = () => {
                         viewport={{ once: true }}
                         className="text-3xl md:text-7xl font-black text-white mb-6 md:mb-8 tracking-tighter leading-[0.95]"
                     >
-                        We Build, <br />
+                       We Build Digital Products <br />
                         <motion.span 
                             animate={{ 
                                 backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
@@ -56,7 +56,7 @@ const Workflow = () => {
                             style={{ backgroundSize: "200% auto" }}
                             className="italic font-serif font-light text-transparent bg-clip-text bg-linear-to-r from-violet-400 via-fuchsia-400 to-violet-400"
                         >
-                            You Scale Fast.
+                            That Help You Scale Faster.
                         </motion.span>
                     </motion.h2>
                     
@@ -67,8 +67,7 @@ const Workflow = () => {
                         transition={{ delay: 0.1 }}
                         className="text-gray-400 max-w-2xl mx-auto text-lg md:text-xl font-medium leading-relaxed opacity-80"
                     >
-                        Specialized in High-Performance Web Apps, Cross-Platform Mobile Solutions, 
-                        and AI-Powered Business Automations.
+                       We specialize in website development, app development, custom software, and AI automation in Gwalior, helping businesses launch faster, automate operations, and grow efficiently.
                     </motion.p>
                 </div>
 
@@ -85,7 +84,7 @@ const Workflow = () => {
                         <StepCard 
                             index={0}
                             title={<>Web <span className="italic font-serif font-light text-violet-300">Development</span></>}
-                            description="Crafting high-speed, SEO-optimized web applications with modern tech stacks and pixel-perfect UI."
+                            description="We provide website development services in Gwalior, building fast, responsive, and SEO-friendly websites that help your business generate leads and grow online."
                         >
                             <WebDevMockup />
                         </StepCard>
@@ -93,7 +92,7 @@ const Workflow = () => {
                         <StepCard 
                             index={1}
                             title={<>App <span className="italic font-serif font-light text-violet-300">Engineering</span></>}
-                            description="Building seamless cross-platform mobile experiences that feel native and perform beautifully."
+                            description="We are a trusted app development company in Gwalior, creating high-performance Android & iOS apps that deliver seamless user experience and scalability."
                         >
                             <AppDevMockup />
                         </StepCard>
@@ -101,7 +100,7 @@ const Workflow = () => {
                         <StepCard 
                             index={2}
                             title={<>AI <span className="italic font-serif font-light text-violet-300">Automations</span></>}
-                            description="Integrating intelligent agents and LLM-powered workflows to eliminate repetitive manual tasks."
+                            description="Automate your business with AI-powered systems. We offer AI automation services in Gwalior to reduce manual work, improve efficiency, and scale your operations."
                         >
                             <AIAutomationMockup />
                         </StepCard>
@@ -302,28 +301,68 @@ const LaunchMockup = () => (
         </div>
         <div className="text-[10px] font-black text-green-400 uppercase tracking-widest flex items-center gap-2">
             <div className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse" />
-            Vercel: Deployment Live
+            Deployment Live
         </div>
     </div>
 );
 
 const SupportMockup = () => (
-    <div className="flex flex-col gap-4">
-        <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-green-500/10 border border-green-500/30 flex items-center justify-center">
-                <ShieldCheck className="w-5 h-5 text-green-500" />
+    <div className="flex flex-col gap-4 relative">
+        {/* Header Row */}
+        <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-green-500/10 border border-green-500/30 flex items-center justify-center">
+                    <ShieldCheck className="w-5 h-5 text-green-500" />
+                </div>
+                <div>
+                    <div className="text-[10px] font-black text-white uppercase tracking-tighter">System Health</div>
+                    <div className="text-[8px] text-green-400 font-bold uppercase tracking-widest flex items-center gap-1">
+                        <span className="w-1 h-1 bg-green-400 rounded-full animate-pulse" />
+                        Optimized & Secure
+                    </div>
+                </div>
             </div>
-            <div>
-                <div className="text-[10px] font-black text-white uppercase tracking-tighter">System Health</div>
-                <div className="text-[8px] text-green-400 font-bold uppercase tracking-widest">Optimized & Secure</div>
+            {/* Uptime Badge */}
+            <div className="px-2 py-0.5 rounded-full bg-white/5 border border-white/10 text-[8px] font-bold text-gray-400">
+                99.9% UPTIME
             </div>
         </div>
-        <div className="h-20 w-full bg-white/2 border border-white/5 rounded-2xl p-4 flex items-end gap-1.5 overflow-hidden">
-            {[30, 45, 25, 60, 40, 80, 55, 90].map((h, i) => (
-                <div key={i} className="flex-1 bg-violet-500/20 rounded-t-sm relative">
-                    <motion.div initial={{ height: 0 }} whileInView={{ height: `${h}%` }} transition={{ duration: 1, delay: i * 0.1 }} className="absolute bottom-0 left-0 right-0 bg-violet-500/50 rounded-t-sm" />
-                </div>
-            ))}
+
+        {/* Dashboard Panel */}
+        <div className="h-24 w-full bg-white/2 border border-white/5 rounded-2xl p-4 flex flex-col gap-2 relative overflow-hidden group/chart">
+            {/* Grid Background */}
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-size-[12px_12px]" />
+
+            {/* Status Bar */}
+            <div className="flex justify-between items-center text-[8px] font-mono text-gray-500 relative z-10">
+                <span>Performance Monitor</span>
+                <span className="text-violet-400">CPU: 24%</span>
+            </div>
+
+            {/* Bars Chart */}
+            <div className="flex-1 flex items-end gap-1.5 relative z-10">
+                {[30, 45, 25, 60, 40, 80, 55, 90].map((h, i) => (
+                    <div key={i} className="flex-1 bg-violet-500/10 rounded-sm relative h-full">
+                        <motion.div
+                            initial={{ height: 0 }}
+                            whileInView={{ height: `${h}%` }}
+                            transition={{ duration: 1, delay: i * 0.05, ease: "easeOut" }}
+                            className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-violet-600 to-fuchsia-400 rounded-sm"
+                        />
+                        {/* Hover tooltip effect or dot */}
+                        {i === 5 && (
+                            <motion.div
+                                initial={{ opacity: 0, y: 5, scale: 0.8 }}
+                                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                                transition={{ delay: 1.2, duration: 0.3 }}
+                                className="absolute -top-4 left-1/2 -translate-x-1/2 bg-violet-600 text-white text-[6px] px-1.5 py-0.5 rounded font-bold shadow-lg shadow-violet-900/40"
+                            >
+                                Peak
+                            </motion.div>
+                        )}
+                    </div>
+                ))}
+            </div>
         </div>
     </div>
 );

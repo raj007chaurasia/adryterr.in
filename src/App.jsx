@@ -7,6 +7,8 @@ import Services from './pages/Services';
 import Products from './pages/Products';
 import Blogs from './pages/Blogs';
 import BlogDetails from './pages/BlogDetails';
+import Terms from './pages/Terms';
+import Privacy from './pages/Privacy';
 import Navbar from './components/common/Navbar';
 import SmoothScroll from './components/common/SmoothScroll';
 import MouseFollower from './components/common/MouseFollower';
@@ -26,6 +28,8 @@ function App() {
             <Route path="/products" element={<Products />} />
             <Route path="/blogs" element={<Blogs />} />
             <Route path="/blogs/:id" element={<BlogDetails />} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="/privacy" element={<Privacy />} />
           </Routes>
         </div>
       </SmoothScroll>

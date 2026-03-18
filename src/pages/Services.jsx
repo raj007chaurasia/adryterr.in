@@ -7,61 +7,61 @@ import { Sparkles } from 'lucide-react';
 
 const servicesData = [
     {
-        title: "AI Product Design",
-        description: "Designing intuitive AI-driven products is one of our sweet spots. Our AI product designs integrate with user needs to enhance decision-making and provide valuable insights for a smarter experience.",
+        title: "AI AUTOMATION SOLUTIONS",
+        description: "We help businesses automate their processes using AI tools like chatbots, lead automation, and workflow systems to save time and increase efficiency.",
         image: "/images/service_ai_product.png",
         items: [
-            "AI Product Design",
-            "AI Product Strategy",
-            "Machine Learning Integration",
+            "AI Chatbots",
+            "Lead Automation Systems",
+            "Workflow Automation",
             "User Research for AI Solutions",
-            "AI Interface Design",
-            "Data Visualization & Dashboards"
+            "AI Integration (CRM, WhatsApp, APIs)",
+            
         ],
         toolIcons: ["framer", "figma", "adobephotoshop", "adobeillustrator", "adobeaftereffects"],
         glowColor: "rgba(6, 182, 212, 0.12)" // Cyan
     },
     {
-        title: "Mobile App Design",
-        description: "We design mobile experiences that are simple to use and visually appealing. Our design ensures smoother performance and maximum value for users on every device.",
+        title: "MOBILE APP DEVELOPMENT",
+        description: "We build high-performance Android & iOS apps that are fast, user-friendly, and designed to scale your business.",
         image: "/images/service_mobile_app.png",
         items: [
-            "Mobile App Design",
-            "App Concept & Strategy",
-            "UI/UX Design for Mobile",
-            "Interaction Design for Mobile",
-            "Mobile Prototyping & Testing",
-            "App Screenshot Service"
+            " Android App Development",
+            " iOS App Development",
+            " Hybrid App Development",
+            "App UI/UX Design",
+            "App Testing & Launch",
+           
         ],
         toolIcons: ["figma", "sketch", "adobexd", "adobeaftereffects"],
         glowColor: "rgba(244, 63, 94, 0.12)" // Rose
     },
     {
-        title: "Web Design",
-        description: "We create visually appealing and user-friendly websites that offer flawless navigation, optimized performance, and a strong connection to your brand's identity.",
+        title: "WEBSITE DEVELOPMENT ",
+        description: "We create fast, responsive, and SEO-friendly websites that help businesses generate leads and grow online.",
         image: "/images/service_web_design.png",
         items: [
-            "Web Design",
-            "Responsive web design",
-            "UI/UX Design",
-            "E-commerce Website Design",
-            "Figma Sites Development",
-            "CMS Integration"
+            "Business Websites",
+            "E-commerce Websites",
+            "Landing Pages",
+            "Custom Web Applications",
+            "CMS Development (WordPress, etc.)",
+           
         ],
         toolIcons: ["figma", "react", "nextdotjs", "webflow"],
         glowColor: "rgba(16, 185, 129, 0.12)" // Emerald
     },
     {
-        title: "UI UX Design",
-        description: "When it comes to UI/UX design, we create experiences that are simple to navigate. Our goal is to deliver user-friendly interactions that align with your brand and fulfill user needs.",
+        title: "UI/UX Design",
+        description: "We design user-friendly interfaces that improve user experience and increase conversions for your website or app.",
         image: "/images/service_ui_ux.png",
         items: [
-            "UI/UX Design",
-            "Visual UI Design",
-            "User Research",
+            "UI Design",
+            "UX Research",
+            "Wireframing & Prototyping",
             "Usability Testing",
-            "Wireframe & Prototyping",
-            "Interaction Design"
+            "Interaction Design",
+            
         ],
         toolIcons: ["figma", "adobeaftereffects", "adobephotoshop", "react"],
         glowColor: "rgba(168, 85, 247, 0.12)" // Purple
@@ -88,18 +88,17 @@ const Services = () => {
                     </div>
 
                     <h1 className="text-4xl md:text-6xl lg:text-7xl font-sans font-black tracking-tight text-white mb-6">
-                        What We Can <br />
-                        <span 
+                        Digital Solutions That Grow Your Business <br />
+                        <span
                             className="font-playfair italic font-medium text-[#cc00cc] drop-shadow-[0_0_20px_rgba(204,0,204,0.2)]"
                             style={{ fontFamily: "'Playfair Display', serif" }}
                         >
-                            Do For You
+                            Websites. Apps. AI Automation.
                         </span>
                     </h1>
 
                     <p className="text-gray-400 text-sm md:text-lg max-w-2xl mx-auto font-medium leading-relaxed">
-                        We balance aesthetics with functionality to deliver premium digital products that scale easily.
-                    </p>
+We help businesses with website development, app development, custom software, and AI automation in Gwalior, building fast, scalable, and result-driven digital products.                    </p>
                 </motion.div>
 
                 {/* Services Section Grid Layout */}

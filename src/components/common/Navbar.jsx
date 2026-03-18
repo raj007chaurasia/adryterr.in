@@ -44,7 +44,7 @@ const Navbar = () => {
                 >
                     <div className="flex items-center justify-between px-5 py-2.5">
                         <Link to="/" onClick={() => { setIsOpen(false); document.body.style.overflow = 'auto'; }}>
-                            <img src="/images/adryter2.png" alt="Logo" className="h-6 brightness-110" />
+                            <img src="./images/Adryter-1.png" alt="Logo" className="h-6 brightness-110" />
                         </Link>
 
                         <button
@@ -126,7 +126,7 @@ const Navbar = () => {
 
                         <div className="flex items-center px-4">
                             <Link to="/">
-                                <img src="/images/adryter2.png" alt="AdRyter" className="h-10 object-contain brightness-110" />
+                                <img src="./images/Adryter-1.png" alt="AdRyter" className="h-10 object-contain brightness-110" />
                             </Link>
                         </div>
 

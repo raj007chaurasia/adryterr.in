@@ -5,25 +5,25 @@ const stats = [
     {
         title: 'Clients',
         value: '150+',
-        description: 'Collaborating with ambitious brands to create meaningful experiences.',
+        description: 'Trusted by businesses for delivering high-performance websites and apps.',
         glowColor: 'rgba(16, 185, 129, 0.15)' // Emerald
     },
     {
-        title: 'Countries Served',
-        value: '7',
-        description: 'Bringing creativity and strategy together for brand success worldwide.',
+        title: 'Projects Delivered',
+        value: '100+',
+        description: 'Successfully completed projects across multiple industries and business types.',
         glowColor: 'rgba(59, 130, 246, 0.15)' // Blue
     },
     {
         title: 'Experience',
         value: '4',
-        description: 'Designing with passion, precision, and expertise over the years.',
+        description: 'Hands-on experience in building scalable software and automation systems.',
         glowColor: 'rgba(168, 85, 247, 0.15)' // Purple
     },
     {
-        title: 'Biriyani Plates',
-        value: '999',
-        description: "We're serious about our Biriyani! It's our top spot fuel (not sponsored, but we wouldn't mind).",
+        title: 'Solutions Built',
+        value: '200+',
+        description: "From websites to apps and AI automation systems that drive results.",
         glowColor: 'rgba(244, 63, 94, 0.15)' // Rose
     }
 ];
@@ -125,14 +125,14 @@ const AboutStats = () => {
                         transition={{ delay: 0.1 }}
                         className="text-3xl md:text-5xl lg:text-6xl font-sans font-bold tracking-tighter leading-[1.1] text-white max-w-5xl mx-auto"
                     >
-                        Pioneering Impactful Change With Forward-Thinking <br className="hidden md:block" />
+                        Building Digital Solutions That   <br className="hidden md:block" />
                         <span
-                            className="font-playfair italic font-black text-[#cc00cc] drop-shadow-[0_0_15px_rgba(204,0,204,0.3)] pr-1"
+                            className="font-playfair italic pr-2 font-black text-[#cc00cc] drop-shadow-[0_0_15px_rgba(204,0,204,0.3)]"
                             style={{ fontFamily: "'Playfair Display', serif" }}
                         >
-                            Partners
+                            Drive Real 
                         </span>
-                        Since 2025.
+                     Business  Growth
                     </motion.h2>
                 </div>
 

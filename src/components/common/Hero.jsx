@@ -7,12 +7,14 @@ import LogoLoop from '../LogoLoop';
 const Hero = () => {
     const navigate = useNavigate();
     const partnerLogos = useMemo(() => [
-        { node: <span className="text-gray-500 font-bold tracking-widest px-4 opacity-50 hover:opacity-100 transition-opacity">TECHFLOW</span> },
-        { node: <span className="text-gray-500 font-bold tracking-widest px-4 opacity-50 hover:opacity-100 transition-opacity">VANTAGE</span> },
-        { node: <span className="text-gray-500 font-bold tracking-widest px-4 opacity-50 hover:opacity-100 transition-opacity">NEXUS</span> },
-        { node: <span className="text-gray-500 font-bold tracking-widest px-4 opacity-50 hover:opacity-100 transition-opacity">QUANTUM</span> },
-        { node: <span className="text-gray-500 font-bold tracking-widest px-4 opacity-50 hover:opacity-100 transition-opacity">ZENITH</span> },
-        { node: <span className="text-gray-500 font-bold tracking-widest px-4 opacity-50 hover:opacity-100 transition-opacity">AURORA</span> },
+        { node: <span className="text-gray-500 font-bold tracking-widest px-4 opacity-50 hover:opacity-100 transition-opacity uppercase">PedNeuro</span> },
+        { node: <span className="text-gray-500 font-bold tracking-widest px-4 opacity-50 hover:opacity-100 transition-opacity uppercase">celagenex</span> },
+        { node: <span className="text-gray-500 font-bold tracking-widest px-4 opacity-50 hover:opacity-100 transition-opacity uppercase">edukulclasses</span> },
+        { node: <span className="text-gray-500 font-bold tracking-widest px-4 opacity-50 hover:opacity-100 transition-opacity uppercase">oxford public school</span> },
+        { node: <span className="text-gray-500 font-bold tracking-widest px-4 opacity-50 hover:opacity-100 transition-opacity uppercase">royal milestone resorts</span> },
+        { node: <span className="text-gray-500 font-bold tracking-widest px-4 opacity-50 hover:opacity-100 transition-opacity uppercase">itm university</span> },
+        { node: <span className="text-gray-500 font-bold tracking-widest px-4 opacity-50 hover:opacity-100 transition-opacity uppercase">venus public school</span> },
+        { node: <span className="text-gray-500 font-bold tracking-widest px-4 opacity-50 hover:opacity-100 transition-opacity uppercase">forgewellmetal</span> },
     ], []);
 
     return (
@@ -37,31 +39,30 @@ const Hero = () => {
                 <div className="mb-4 md:mb-6 flex items-center justify-center gap-2 md:gap-4 group cursor-default">
                     <div className="h-px w-4 md:w-6 bg-linear-to-r from-transparent to-[#660066]/60"></div>
                     <p className="text-[#cc00cc] font-black tracking-widest md:tracking-[0.5em] text-[8px] md:text-[12px] uppercase drop-shadow-[0_0_10px_rgba(204,0,204,0.3)]">
-                        Design • Build • Innovate
+                        DESIGN • DEVELOP • AUTOMATE
                     </p>
                     <div className="h-px w-4 md:w-6 bg-linear-to-r from-[#660066]/60 to-transparent"></div>
                 </div>
 
                 {/* Dynamic Heading */}
                 <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tighter mb-4 md:mb-6 scale-95 md:scale-100">
-                    We <span className="italic font-serif font-light text-gray-300">Design</span> Products That <br />
-                    Drive <span className="relative inline-block px-3 py-0.5 mx-1">
-                        <span className="relative z-10 italic font-serif font-light text-gray-300">Results</span>
+                    We Build <span className="italic font-serif font-light text-gray-300">Software</span> That Drives Real Business
+                    <span className="relative inline-block px-3 py-0.5 mx-1">
+                        <span className="relative z-10 italic font-serif font-light text-gray-300"> Growth</span>
                         <div className="absolute inset-0 border-2 border-[#660066] rounded-xl -rotate-1 skew-x-1"></div>
                     </span>
                 </h1>
 
                 {/* Sub-heading */}
                 <p className="text-gray-400 text-sm md:text-lg max-w-xl mx-auto mb-6 md:mb-8 font-medium leading-relaxed">
-                    Join a growing community of brands and creators building high-performance
-                    digital products with AdRyter.
+                   We are a leading software development company in Gwalior helping startups and businesses build high-performance websites, mobile apps, and AI-powered automation systems.
                 </p>
 
                 {/* Social Proof & CTA Row */}
                 <div className="flex flex-col items-center gap-8">
                     {/* Expertise Tags */}
                     <div className="flex flex-wrap items-center justify-center gap-3 mb-4">
-                        {['UI/UX Design', 'Web Development', 'Brand Identity', 'SEO'].map((tag) => (
+                        {['Web Development', 'App Development', 'Custom Software','AI Automation'].map((tag) => (
                             <div key={tag} className="px-4 py-1.5 bg-white/5 border border-white/10 rounded-full backdrop-blur-md text-[10px] font-bold uppercase tracking-wider text-gray-400 hover:text-white hover:border-[#660066]/50 transition-all cursor-default">
                                 {tag}
                             </div>

@@ -139,8 +139,8 @@ export default function Testimonials() {
           transition={{ delay: 0.1 }}
           className="text-4xl md:text-7xl font-bold text-white tracking-tighter"
         >
-          Trusted by <span className="italic font-serif font-light text-white/90">People</span><br />
-          <span className="text-gray-400">Chosen By</span> Brands
+        Trusted by  <span className="italic font-serif font-light text-white/90">Businesses</span><br />
+          <span className="text-gray-400">in Gwalior & Across</span>   India
         </motion.h2>
       </div>
 

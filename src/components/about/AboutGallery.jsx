@@ -6,17 +6,17 @@ const imagesTop = [
     '/images/office2.webp',
     '/images/office3.webp',
     '/images/office4.webp',
-    '/images/office1.webp', // Duplicate for seamless loop
-    '/images/office2.webp',
+    '/images/office1.webp', 
+    '/images/office8.webp',
 ];
 
 const imagesBottom = [
+    '/images/office2.webp',
+    '/images/office1.webp', 
     '/images/office8.webp',
-    '/images/office7.webp',
-    '/images/office6.webp',
     '/images/office5.webp',
-    '/images/office8.webp', // Duplicate for seamless loop
-    '/images/office7.webp',
+    '/images/office6.webp',
+    
 ];
 
 const AboutGallery = () => {

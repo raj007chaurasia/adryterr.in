@@ -126,18 +126,17 @@ const AboutContributions = () => {
                    
 
                     <h2 className="text-3xl md:text-5xl lg:text-7xl font-sans font-bold tracking-tighter leading-[1.1] text-white max-w-4xl mx-auto">
-                        UX Insights to Grow the <br className="hidden md:block" />
+                       Insights to Grow Your  <br className="hidden md:block" />
                         <span 
                             className="font-playfair italic font-black text-[#cc00cc] drop-shadow-[0_0_15px_rgba(204,0,204,0.3)] pr-1" 
                             style={{ fontFamily: "'Playfair Display', serif" }}
                         >
-                            Industry
+                            Business with Technology
                         </span>
                     </h2>
 
                     <p className="text-gray-500 mt-8 text-sm md:text-lg max-w-2xl mx-auto font-medium leading-relaxed">
-                        Building a stronger design community by sharing what we know, <br className="hidden md:block" />
-                        so you can create what you dream.
+                      Explore expert insights on website development, app development, AI automation, and digital growth strategies to help your business scale faster.
                     </p>
                 </motion.div>
 
