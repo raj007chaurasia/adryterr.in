@@ -84,11 +84,14 @@ const AboutPartner = () => {
                     {/* CTA Button */}
                     <motion.div variants={itemVariants}>
                         <StarBorder
-                            as="button"
+                            as="a"
+                            href="https://wa.me/917738538548"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             color="#cc00cc"
                             speed="4s"
                             thickness={2}
-                            className="hover:scale-105 cursor-pointer active:scale-95 transition-transform bg-[#cc00cc]/20 shadow-[0_0_30px_rgba(204,0,204,0.2)]"
+                            className="hover:scale-105 cursor-pointer active:scale-95 transition-transform bg-[#cc00cc]/20 shadow-[0_0_30px_rgba(204,0,204,0.2)] flex items-center justify-center"
                         >
                             <div className="px-6 py-3 lg:px-8 lg:py-3.5 text-white text-xs lg:text-sm font-black uppercase tracking-widest flex items-center gap-2 lg:gap-3">
                                 Book a Call

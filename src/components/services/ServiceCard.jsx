@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion, useMotionValue, useTransform } from 'framer-motion';
-import { SiFigma, SiReact, SiNextdotjs, SiWebflow, SiSketch, SiFramer, SiFirebase, SiTailwindcss, SiDocker, SiPostgresql, SiAndroid } from 'react-icons/si';
+import { Link } from 'react-router-dom';
+import { SiFigma, SiReact, SiNextdotjs, SiWebflow, SiSketch, SiFramer, SiFirebase, SiTailwindcss, SiDocker, SiPostgresql, SiAndroid, SiN8N, SiZapier, SiMake, SiOpenai, SiAnthropic, SiFlutter, SiSwift, SiKotlin, SiApple } from 'react-icons/si';
 import { TbBrandAdobePhotoshop, TbBrandAdobeIllustrator, TbBrandAdobeAfterEffect, TbBrandAdobeXd, TbBrandAws } from 'react-icons/tb';
 
 const ICON_MAP = {
@@ -19,7 +20,16 @@ const ICON_MAP = {
     docker: SiDocker,
     aws: TbBrandAws,
     postgresql: SiPostgresql,
-    android: SiAndroid
+    android: SiAndroid,
+    n8n: SiN8N,
+    zapier: SiZapier,
+    make: SiMake,
+    openai: SiOpenai,
+    anthropic: SiAnthropic,
+    flutter: SiFlutter,
+    swift: SiSwift,
+    kotlin: SiKotlin,
+    apple: SiApple
 };
 
 const ServiceCard = ({
@@ -144,10 +154,8 @@ const ServiceCard = ({
 
                         {/* Visit Button */}
                         {visitLink && (
-                            <a 
-                                href={visitLink} 
-                                target="_blank" 
-                                rel="noopener noreferrer"
+                            <Link 
+                                to="/contact#contact-form" 
                                 className="inline-flex items-center justify-center gap-2 px-5 py-2 rounded-full bg-[#cc00cc] hover:bg-[#b300b3] text-white text-sm font-semibold transition-all duration-300 shadow-[0_4px_12px_-2px_rgba(204,0,204,0.3)] hover:shadow-[0_6px_16px_rgba(204,0,204,0.4)] cursor-pointer w-full sm:w-auto"
                                 onClick={(e) => e.stopPropagation()}
                             >
@@ -155,7 +163,7 @@ const ServiceCard = ({
                                 <svg className="w-4 h-4 translate-y-[0.5px]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                 </svg>
-                            </a>
+                            </Link>
                         )}
                     </div>
                 )}

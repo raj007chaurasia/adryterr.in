@@ -63,7 +63,10 @@ const AboutCareer = () => {
                         </motion.p>
 
                         {/* CTA Button */}
-                        <motion.button
+                        <motion.a
+                            href="https://adryter.com/hiring"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
@@ -79,7 +82,7 @@ const AboutCareer = () => {
                             >
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                             </svg>
-                        </motion.button>
+                        </motion.a>
                     </div>
 
                     {/* Right Column: Overlapping Image */}
@@ -92,7 +95,7 @@ const AboutCareer = () => {
                             className="relative md:absolute bottom-0 md:bottom-[-60px] lg:bottom-[-80px] right-0 md:right-[-10px] lg:right-[-20px] w-full max-w-[400px] md:max-w-none md:w-[105%] lg:w-[115%] aspect-square md:aspect-auto flex items-end justify-center md:justify-end"
                         >
                             <img
-                                src="/images/about_career_people.png"
+                                src="/images/carrer.png"
                                 alt="Our Team"
                                 className="w-full h-auto object-bottom object-contain relative z-10 select-none pointer-events-none drop-shadow-[0_20px_40px_rgba(0,0,0,0.8)]"
                             />

@@ -53,7 +53,7 @@ export default function Locations() {
         <div className="flex flex-col gap-8 max-w-5xl mx-auto">
           {/* Top Row: Address and Contact */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
-            
+
             {/* Card 1: Address (Australia & United States) */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9, y: 20 }}
@@ -73,7 +73,7 @@ export default function Locations() {
                 </h4>
                 <div className="relative z-10 space-y-4 text-gray-400 text-xs md:text-sm font-medium leading-relaxed flex-1 flex flex-col justify-center">
                   <p className="opacity-90 max-w-[280px]">
-T-23, 3rd floor, Madhav Plaza, Jinsi Rd Number 2, Lohiya Bazaar, Gwalior, Madhya Pradesh 474001                  </p>
+                    T-23, 3rd floor, Madhav Plaza, Jinsi Rd Number 2, Lohiya Bazaar, Gwalior, Madhya Pradesh 474001                  </p>
                 </div>
               </div>
             </motion.div>
@@ -93,17 +93,17 @@ T-23, 3rd floor, Madhav Plaza, Jinsi Rd Number 2, Lohiya Bazaar, Gwalior, Madhya
                   <Phone className="w-6 h-6 text-[#cc00cc]" />
                 </div>
                 <h4 className="relative z-10 text-xl font-bold text-white mb-4 tracking-tight">
-                    Contact
+                  Contact
                 </h4>
                 <div className="relative z-10 flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-0 text-gray-400 text-xs md:text-sm font-medium leading-relaxed flex-1 w-full mt-4">
-                  
+
                   {/* Phone */}
                   <div className="flex flex-col items-center gap-1.5 w-full flex-1">
                     <p className="text-white font-semibold flex items-center gap-1.5">
                       <Phone className="w-3.5 h-3.5 text-[#cc00cc]" />Number
                     </p>
                     <a href="tel:07738538548" className="opacity-80 hover:text-[#cc00cc] hover:opacity-100 transition-all duration-300">
-                     +91-7738538548 <br />
+                      +91-7738538548 <br />
                     </a>
                   </div>
 
@@ -136,12 +136,12 @@ T-23, 3rd floor, Madhav Plaza, Jinsi Rd Number 2, Lohiya Bazaar, Gwalior, Madhya
                 <h4 className="relative z-10 text-xl font-bold text-white mb-5 tracking-tight">
                   Social Media Icons
                 </h4>
-                
+
                 {/* Icons Grid extracted from Footer for match */}
                 <div className="relative z-10 flex items-center justify-center gap-5">
                   {/* LinkedIn */}
-                  <motion.a 
-                    href="http://linkedin.com/company/adryter-advertising" 
+                  <motion.a
+                    href="http://linkedin.com/company/adryter-advertising"
                     target="_blank"
                     whileHover={{ y: -4, scale: 1.1 }}
                     className="w-11 h-11 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 hover:border-[#0077b5]/30 shadow-[0_4px_15px_-3px_rgba(0,119,181,0.05)] hover:shadow-[0_4px_25px_-3px_rgba(0,119,181,0.2)] transition-all duration-300 group relative overflow-hidden backdrop-blur-sm"
@@ -151,8 +151,8 @@ T-23, 3rd floor, Madhav Plaza, Jinsi Rd Number 2, Lohiya Bazaar, Gwalior, Madhya
                   </motion.a>
 
                   {/* Instagram */}
-                  <motion.a 
-                    href="https://www.instagram.com/adryter_advvertising" 
+                  <motion.a
+                    href="https://www.instagram.com/adryter_advvertising"
                     target="_blank"
                     whileHover={{ y: -4, scale: 1.1 }}
                     className="w-11 h-11 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 hover:border-[#ff0066]/30 shadow-[0_4px_15px_-3px_rgba(255,0,102,0.05)] hover:shadow-[0_4px_25px_-3px_rgba(255,0,102,0.2)] transition-all duration-300 group relative overflow-hidden backdrop-blur-sm"
@@ -162,8 +162,8 @@ T-23, 3rd floor, Madhav Plaza, Jinsi Rd Number 2, Lohiya Bazaar, Gwalior, Madhya
                   </motion.a>
 
                   {/* Youtube */}
-                  <motion.a 
-                    href="https://www.youtube.com/@AdRyterAdvvertising" 
+                  <motion.a
+                    href="https://www.youtube.com/@AdRyterAdvvertising"
                     target="_blank"
                     whileHover={{ y: -4, scale: 1.1 }}
                     className="w-11 h-11 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 hover:border-[#ff0000]/30 shadow-[0_4px_15px_-3px_rgba(255,0,0,0.05)] hover:shadow-[0_4px_25px_-3px_rgba(255,0,0,0.2)] transition-all duration-300 group relative overflow-hidden backdrop-blur-sm"
@@ -173,8 +173,8 @@ T-23, 3rd floor, Madhav Plaza, Jinsi Rd Number 2, Lohiya Bazaar, Gwalior, Madhya
                   </motion.a>
 
                   {/* Facebook */}
-                  <motion.a 
-                    href="https://www.facebook.com/adryteradvertising" 
+                  <motion.a
+                    href="https://www.facebook.com/adryteradvertising"
                     target="_blank"
                     whileHover={{ y: -4, scale: 1.1 }}
                     className="w-11 h-11 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 hover:border-[#1877f2]/30 shadow-[0_4px_15px_-3px_rgba(24,119,242,0.05)] hover:shadow-[0_4px_25px_-3px_rgba(24,119,242,0.2)] transition-all duration-300 group relative overflow-hidden backdrop-blur-sm"

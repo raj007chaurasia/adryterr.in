@@ -96,7 +96,7 @@ export default function Comparison() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             className="text-3xl md:text-7xl font-bold text-white tracking-tighter mb-4 md:mb-6 leading-tight"
           >
            Why Choose <br className="md:hidden" />
@@ -106,7 +106,7 @@ export default function Comparison() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ delay: 0.2, duration: 1, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ delay: 0.1, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             className="text-lg md:text-2xl font-medium text-gray-400 tracking-tight max-w-2xl mx-auto"
           >
             Why settle for average when you can get high-performance websites, apps, and AI automation that actually grow your business?
@@ -128,7 +128,7 @@ export default function Comparison() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ delay: 0.3 + idx * 0.1 }}
+                    transition={{ delay: 0.15 + idx * 0.05 }}
                     className="flex flex-col items-center gap-2 pb-2"
                   >
                     <div className="text-[#660066] opacity-60">{col.icon}</div>
@@ -148,8 +148,8 @@ export default function Comparison() {
                     whileInView={{ opacity: 1, scale: 1, y: 0 }}
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{
-                      duration: 1.2,
-                      delay: idx * 0.1,
+                      duration: 0.6,
+                      delay: idx * 0.05,
                       ease: [0.16, 1, 0.3, 1]
                     }}
                     className={cn(
@@ -198,7 +198,7 @@ export default function Comparison() {
                             initial={{ scale: 0, opacity: 0 }}
                             whileInView={{ scale: 1, opacity: 1 }}
                             viewport={{ once: true }}
-                            transition={{ delay: 0.5 + idx * 0.1 + sIdx * 0.05, type: "spring" }}
+                            transition={{ delay: 0.25 + idx * 0.05 + sIdx * 0.02, type: "spring", stiffness: 300, damping: 20 }}
                             className={cn(
                               "w-12 h-12 rounded-full flex items-center justify-center transition-all duration-500",
                               stat

@@ -1,4 +1,5 @@
 import React from 'react';
+import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -15,9 +16,10 @@ import MouseFollower from './components/common/MouseFollower';
 
 function App() {
   return (
-    <Router>
-      <SmoothScroll>
-        <div className="bg-[#030303] min-h-screen text-white selection:bg-[#cc00cc]/30">
+    <HelmetProvider>
+      <Router>
+        <SmoothScroll>
+          <div className="bg-[#030303] min-h-screen text-white selection:bg-[#cc00cc]/30">
           <MouseFollower />
           <Navbar />
           <Routes>
@@ -31,9 +33,10 @@ function App() {
             <Route path="/terms" element={<Terms />} />
             <Route path="/privacy" element={<Privacy />} />
           </Routes>
-        </div>
-      </SmoothScroll>
-    </Router>
+          </div>
+        </SmoothScroll>
+      </Router>
+    </HelmetProvider>
   );
 }
 

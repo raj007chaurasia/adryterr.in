@@ -6,55 +6,43 @@ import { Quote } from "lucide-react";
 
 const TESTIMONIALS_ROW_1 = [
   {
-    name: "Anika",
-    role: "Founder @ Coinpulse",
-    text: "Design Monks is a professional, reliable partner for end-to-end product builds. From clean, modern designs to seamless development with Dev Monks, they exceeded my expectations. I couldn't be happier with the collaboration!",
-    image: "/images/testimonials/avatar1.png"
+    name: "Ms. Jaskiran Mehta",
+    role: "Youtuber",
+    text: "AdRyter built a stunning, fast-loading portfolio website that showcases my content perfectly. Their web dev skills are unmatched, ensuring zero downtime during major uploads.",
+    image: ""
   },
   {
-    name: "Armen Avagyan",
-    role: "CEO & Co Founder @ Fraus",
-    text: "Working with Design Monks was a great experience. They translated our business goals into clean, aesthetic designs with total transparency. The process was fast and stress-free, even in the complex cybersecurity space.",
-    image: "/images/testimonials/avatar2.png"
+    name: "Ms. Anamika Kumari",
+    role: "Content Creator",
+    text: "The user experience on my new mobile-optimized website is incredible. AdRyter's interface layouts make it extremely easy for my audience to navigate and engage.",
+    image: ""
   },
   {
-    name: "Moshiur Rahman Radif",
-    role: "COO @ Ontik Technologies",
-    text: "We've worked with Design Monks for over 2 years on 10+ projects, and the experience has been outstanding. They deliver with precision, provide clear documentation, and make the whole process smooth and worry-free.",
-    image: "/images/testimonials/avatar3.png"
-  },
-  {
-    name: "Sarah Chen",
-    role: "Product Lead @ Velocity",
-    text: "The team's ability to grasp complex requirements and turn them into elegant user experiences is unmatched. They are not just designers; they are strategic partners who truly care about the product's success.",
-    image: "/images/testimonials/avatar4.png"
+    name: "Sachchidanand Dikshit",
+    role: "Freelancer",
+    text: "Extremely professional web development services. They optimized my site's backend speed and resolved complex hosting issues. Always cooperative and available to assist.",
+    image: ""
   }
 ];
 
 const TESTIMONIALS_ROW_2 = [
   {
-    name: "Neil Saidi",
-    role: "Founder @ LeKlub",
-    text: "Had an amazing experience with Design Monks. Their talented team understood my vision and turned it into stunning visuals, with their impressive attention to detail skills. I highly recommend their high-quality design services.",
-    image: "/images/testimonials/avatar5.png"
+    name: "Ms. Aareen Kaur",
+    role: "Dietician",
+    text: "They developed a custom appointment booking web application for my practice. It's fully automated and handles my schedule flawlessly. Highly recommend for pure web engineering!",
+    image: ""
   },
   {
-    name: "Laiza Lamyea Lia",
-    role: "Marketing Lead @ Akij Group",
-    text: "I've collaborated with Design Monks for a year, and the experience has been truly remarkable. Their team's cooperative nature, combined with their innovative ideas and unwavering effort, has made our partnership a fruitful one.",
-    image: "/images/testimonials/avatar6.png"
+    name: "Mr. Sahil Lodha",
+    role: "CEO @ Forgell Metal",
+    text: "Unparalleled expertise in enterprise web setups. AdRyter upgraded our supply chain management portal with a modern interface and scalable architecture that delivers real speed.",
+    image: ""
   },
   {
-    name: "Shuvo Ahmed",
-    role: "Founder @ Zantrik",
-    text: "We would like to express our gratitude to the team for the incredible opportunity with the Zantrik App. Your collaboration and support have been invaluable and greatly appreciated.",
-    image: "/images/testimonials/avatar7.png"
-  },
-  {
-    name: "James Wilson",
-    role: "CTO @ Nexus",
-    text: "Exceptional quality and speed. They handled our rebranding and web app development with absolute professionalism. The final result exceeded our expectations and our users love the new interface.",
-    image: "/images/testimonials/avatar8.png"
+    name: "Dr. Prajakta Rahokale",
+    role: "Founder of PN Education",
+    text: "AdRyter delivered an exceptional, expertly crafted website for PN Education, seamlessly aligning with our educational vision from concept to execution.",
+    image: ""
   }
 ];
 
@@ -64,14 +52,11 @@ const TestimonialCard = ({ item }) => (
       <Quote className="w-12 h-12 text-white" />
     </div>
     
-    <p className="text-gray-400 text-sm md:text-base leading-relaxed mb-8 relative z-10 font-medium">
+    <p className="text-gray-400 text-sm md:text-base leading-relaxed mb-8 relative z-10 font-medium h-[120px] flex items-center">
       "{item.text}"
     </p>
     
-    <div className="flex items-center gap-4 relative z-10">
-      <div className="w-12 h-12 rounded-full overflow-hidden border border-white/10 shrink-0 bg-zinc-800">
-        <img src={item.image} alt={item.name} className="w-full h-full object-cover" onError={(e) => e.target.src = "https://api.dicebear.com/7.x/avataaars/svg?seed=" + item.name} />
-      </div>
+    <div className="flex items-center gap-4 relative z-10 border-t border-white/5 pt-5">
       <div>
         <h4 className="text-white font-bold text-sm md:text-base tracking-tight">{item.name}</h4>
         <p className="text-gray-500 text-xs md:text-sm font-medium">{item.role}</p>

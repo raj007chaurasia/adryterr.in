@@ -42,9 +42,9 @@ const ContactPage = () => {
   }, [location]);
 
   return (
-    <div className="bg-[#030303] min-h-screen pt-24 relative overflow-hidden">
+    <div className="bg-[#030303] min-h-screen pt-24 relative">
       {/* Background Subtle Glows */}
-      <div className="absolute top-0 left-0 w-full h-full pointer-events-none opacity-20">
+      <div className="absolute top-0 left-0 w-full  pointer-events-none opacity-20">
         <div className="absolute top-[-10%] left-[-10%] w-[60vw] h-[60vw] bg-[#660066]/20 rounded-full blur-[120px]" />
         <div className="absolute bottom-[-10%] right-[-10%] w-[50vw] h-[50vw] bg-[#8b5cf6]/10 rounded-full blur-[120px]" />
       </div>
@@ -106,7 +106,7 @@ const ContactPage = () => {
                       className="w-20 h-20 rounded-full bg-white/10 backdrop-blur-xl border border-white/20 flex items-center justify-center shadow-2xl relative"
                     >
                       <div className="absolute -inset-2 rounded-full border border-[#cc00cc]/30 animate-ping opacity-75" />
-                      <div className="w-0 h-0 border-t-[10px] border-t-transparent border-l-[16px] border-l-white border-b-[10px] border-b-transparent translate-x-[1px]" />
+                      <div className="w-0 h-0 border-t-10 border-t-transparent border-l-16 border-l-white border-b-10 border-b-transparent translate-x-px" />
                     </motion.div>
                  </div>
                </div>
@@ -120,7 +120,7 @@ const ContactPage = () => {
                <div className="space-y-12">
                  <InfoGroup title="General" value="info@adryter.in" href="mailto:info@adryter.in" />
                  <InfoGroup title="Phone" value="+91-7738538548" href="tel:+917738538548" />
-                 <InfoGroup title="Studio" value="T-23, 3rd floor, Madhav Plaza, Jinsi Rd Number 2, Lohiya Bazaar, Gwalior, Madhya Pradesh 474001" />
+                 <InfoGroup title="Location" value="T-23, 3rd floor, Madhav Plaza, Jinsi Rd Number 2, Lohiya Bazaar, Gwalior, Madhya Pradesh 474001" />
                </div>
              </div>
 

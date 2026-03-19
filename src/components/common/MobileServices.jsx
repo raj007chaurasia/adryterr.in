@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight, Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -47,13 +48,13 @@ const MobileServices = ({ services }) => {
           </div>
 
           {/* CTA Link */}
-          <motion.a
-            href="#contact"
+          <Link
+            to="/services"
             className="flex items-center gap-2 text-white font-bold tracking-tight text-lg group w-fit"
           >
             Explore {service.title}
             <ArrowRight className="w-5 h-5 text-[#660066]" />
-          </motion.a>
+          </Link>
 
           {/* Divider between services */}
           {idx !== services.length - 1 && (

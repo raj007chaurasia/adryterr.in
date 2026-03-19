@@ -45,26 +45,26 @@ const MouseFollower = () => {
     <div className="fixed inset-0 pointer-events-none z-9999">
       {/* Circle 3 (Furthest Trail - Deep Purple) */}
       <motion.div
-        style={{ x: spring3X, y: spring3Y, index: 1, willChange: "transform, backdrop-filter" }}
-        className="absolute w-6 h-6 rounded-full bg-[#660066]/30 blur-sm flex items-center justify-center"
+        style={{ x: spring3X, y: spring3Y, index: 1, willChange: "transform" }}
+        className="absolute w-6 h-6 rounded-full bg-[#660066]/40 flex items-center justify-center"
       >
-        <div className="w-1.5 h-1.5 rounded-full bg-[#cc00cc]/20" />
+        <div className="w-1.5 h-1.5 rounded-full bg-[#cc00cc]/40" />
       </motion.div>
 
       {/* Circle 2 (Medium Trail - Magenta) */}
       <motion.div
-        style={{ x: spring2X, y: spring2Y, willChange: "transform, backdrop-filter" }}
-        className="absolute w-5 h-5 rounded-full bg-[#cc00cc]/40 blur-[2px] flex items-center justify-center"
+        style={{ x: spring2X, y: spring2Y, willChange: "transform" }}
+        className="absolute w-5 h-5 rounded-full bg-[#cc00cc]/50 flex items-center justify-center"
       >
-        <div className="w-1 h-1 rounded-full bg-white/20" />
+        <div className="w-1 h-1 rounded-full  " />
       </motion.div>
 
       {/* Circle 1 (Closest to Cursor - White/Bright) */}
       <motion.div
-        style={{ x: spring1X, y: spring1Y, willChange: "transform, backdrop-filter" }}
-        className="absolute w-4 h-4 rounded-full bg-[#cc00cc] border border-[#cc00cc]/30 backdrop-blur-sm flex items-center justify-center p-0.5 shadow-[0_0_15px_rgba(255,255,255,0.3)]"
+        style={{ x: spring1X, y: spring1Y, willChange: "transform" }}
+        className="absolute w-4 h-4 rounded-full bg-[#cc00cc] border border-[#cc00cc]/40 flex items-center justify-center p-0.5 shadow-[0_0_15px_rgba(204,0,204,0.4)]"
       >
-        <div className="w-1.5 h-1.5 rounded-full bg-[#cc00cc] shadow-[0_0_10px_#cc00cc]" />
+        <div className="w-1.5 h-1.5 rounded-full  shadow-[0_0_10px_#cc00cc]" />
       </motion.div>
     </div>
   );

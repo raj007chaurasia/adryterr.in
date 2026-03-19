@@ -111,7 +111,7 @@ const ContentCard = ({ item, index }) => {
 
 const AboutContributions = () => {
     return (
-        <section className="relative w-full py-24 px-4 md:px-8 bg-[#030303] overflow-hidden">
+        <section className="relative w-full py-24 px-4 md:px-8 bg-[#030303] overflow-hidden hidden">
             {/* Background Glows */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(ellipse_at_center,rgba(204,0,204,0.05)_0%,transparent_70%)] pointer-events-none" />
 

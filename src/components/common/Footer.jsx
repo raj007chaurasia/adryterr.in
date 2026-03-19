@@ -13,13 +13,13 @@ const FOOTER_LINKS = [
   },
   {
     title: "Services",
-    links: ["Website Development","App Development","Custom Software","AI Automation","UI/UX DESIGN "],
+    links: ["Website Development", "App Development", "Custom Software", "AI Automation", "UI/UX DESIGN "],
   },
   {
     title: "Specialized Industry",
     links: ["Smart CRM Software", "Smart School Management System for Schools", "Smart Hospital ERP System for Clinics & Hospitals"],
   },
- 
+
 ];
 
 
@@ -27,13 +27,13 @@ const FOOTER_LINKS = [
 export default function Footer() {
   return (
     <footer className="relative bg-[#030303] overflow-hidden   ">
-      <Locations/>
+      <Locations />
       <div className="container mx-auto px-6 relative z-10">
-        
+
         {/* Top Section: Links Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-x-8  mb-24 justify-center items-center w-full">
-          
-          
+
+
 
           {FOOTER_LINKS.map((section, idx) => (
             <div key={idx} className="flex flex-col items-center justify-center">
@@ -43,17 +43,17 @@ export default function Footer() {
                 </h4>
                 <ul className="space-y-4">
                   {section.links.map((link, lIdx) => {
-                    const linkPath = section.title === "Services" 
-                      ? "/services" 
-                      : section.title === "Specialized Industry" 
-                        ? "/products" 
+                    const linkPath = section.title === "Services"
+                      ? "/services"
+                      : section.title === "Specialized Industry"
+                        ? "/products"
                         : {
-                            "Contact Us": "/contact",
-                            "About Us": "/about",
-                            "Products": "/products",
-                            "Services": "/services",
-                            "Blogs": "/blogs"
-                          }[link] || "#";
+                          "Contact Us": "/contact",
+                          "About Us": "/about",
+                          "Products": "/products",
+                          "Services": "/services",
+                          "Blogs": "/blogs"
+                        }[link] || "#";
 
                     return (
                       <li key={lIdx}>
@@ -70,16 +70,16 @@ export default function Footer() {
               </div>
             </div>
           ))}
-        {/* Top Section: Links Grid end */}
+          {/* Top Section: Links Grid end */}
         </div>
 
-     
+
         {/* Bottom Section: Legal & Copyright */}
         <div className="lg:pt-4 flex flex-col md:flex-row items-center justify-center gap-6 lg:gap-30 border-t border-white/5">
           <Link to="/terms" className="text-xs font-bold text-gray-500 hover:text-white transition-colors uppercase tracking-widest">
             Terms & Conditions
           </Link>
-          
+
           <p className="text-xs text-center font-bold text-gray-600 uppercase tracking-widest">
             © 2026, AdRyter, All Rights Reserved.
           </p>
@@ -105,7 +105,7 @@ export default function Footer() {
           </motion.div>
 
           {/* Horizontal Decorative Line */}
-         
+
           {/* Bottom Layer (Reflection Effect) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}

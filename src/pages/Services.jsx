@@ -5,6 +5,8 @@ import ServiceFormCard from '../components/services/ServiceFormCard';
 import Footer from '../components/common/Footer';
 import { Sparkles } from 'lucide-react';
 
+import { Helmet } from 'react-helmet-async';
+
 const servicesData = [
     {
         title: "AI AUTOMATION SOLUTIONS",
@@ -18,7 +20,7 @@ const servicesData = [
             "AI Integration (CRM, WhatsApp, APIs)",
             
         ],
-        toolIcons: ["framer", "figma", "adobephotoshop", "adobeillustrator", "adobeaftereffects"],
+        toolIcons: ["n8n", "make", "zapier", "openai", "anthropic"],
         glowColor: "rgba(6, 182, 212, 0.12)" // Cyan
     },
     {
@@ -33,7 +35,7 @@ const servicesData = [
             "App Testing & Launch",
            
         ],
-        toolIcons: ["figma", "sketch", "adobexd", "adobeaftereffects"],
+        toolIcons: ["flutter", "react", "android", "apple", "firebase"],
         glowColor: "rgba(244, 63, 94, 0.12)" // Rose
     },
     {
@@ -63,7 +65,7 @@ const servicesData = [
             "Interaction Design",
             
         ],
-        toolIcons: ["figma", "adobeaftereffects", "adobephotoshop", "react"],
+        toolIcons: ["figma", "adobeaftereffects", "adobephotoshop"],
         glowColor: "rgba(168, 85, 247, 0.12)" // Purple
     }
 ];
@@ -71,6 +73,15 @@ const servicesData = [
 const Services = () => {
     return (
         <div className="bg-[#030303] text-white selection:bg-[#cc00cc]/30 pt-28 w-full">
+            <Helmet>
+                <title>Digital Services - AdRyter | Software Development in Gwalior</title>
+                <meta name="description" content="Explore AdRyter's digital solutions: AI Automation, High-Performance Mobile App Development, and SEO-friendly Web Design in Gwalior." />
+                <meta name="keywords" content="Best Software Development Company in Gwalior, IT Company Gwalior, Web Development Services Gwalior, App Developers Gwalior, AI Automation setups" />
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="Digital Services - AdRyter | Software Development in Gwalior" />
+                <meta property="og:description" content="Explore AdRyter's digital solutions: AI Automation, High-Performance Mobile App Development, and SEO-friendly Web Design in Gwalior." />
+                <link rel="canonical" href={typeof window !== 'undefined' ? window.location.href : 'https://adryter.in/services'} />
+            </Helmet>
             {/* Background ambient glow effect */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-[radial-gradient(ellipse_at_center,rgba(204,0,204,0.08)_0%,transparent_70%)] pointer-events-none" />
 

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import ServiceCard from '../components/services/ServiceCard';
 import ServiceFormCard from '../components/services/ServiceFormCard';
 import Footer from '../components/common/Footer';
+import { Helmet } from 'react-helmet-async';
 
 const productsData = [
     {
@@ -17,12 +18,12 @@ const productsData = [
             "User Roles & Permissions",
             "WhatsApp & API Integration"
         ],
-        toolIcons: ["react", "nextdotjs", "firebase", "tailwindcss", "docker"],
+        toolIcons: [],
         glowColor: "rgba(6, 182, 212, 0.12)", // Cyan
         visitLink: "#"
     },
     {
-        title: "Smart School Management System for Schools",
+        title: "Smart School Management System",
         description: "Our School Management Software in Gwalior helps schools manage attendance, fees, exams, and communication in one platform. It simplifies daily operations, saves time, and improves overall efficiency.",
         image: "/images/p2.png",
         items: [
@@ -33,12 +34,12 @@ const productsData = [
             "Library & Asset Management System",
             "Noticeboard & Announcement System"
         ],
-        toolIcons: ["react", "nextdotjs", "firebase", "tailwindcss", "android"],
+        toolIcons: [],
         glowColor: "rgba(244, 63, 94, 0.12)", // Rose
         visitLink: "#"
     },
     {
-        title: "Smart Hospital ERP System for Clinics & Hospitals",
+        title: "Smart Hospital ERP System",
         description: "Our Hospital Management Software in Gwalior helps hospitals and clinics manage patient records, appointments, billing, and operations efficiently. It reduces manual work, improves accuracy, and streamlines healthcare processes.",
         image: "/images/p3.png",
         items: [
@@ -48,7 +49,7 @@ const productsData = [
             "Pharmacy & Inventory Management",
             "Lab Test & Report Management"
         ],
-        toolIcons: ["react", "nextdotjs", "postgresql", "docker", "aws"],
+        toolIcons: [],
         glowColor: "rgba(16, 185, 129, 0.12)", // Emerald
         visitLink: "#"
     }
@@ -57,6 +58,15 @@ const productsData = [
 const Products = () => {
     return (
         <div className="bg-[#030303] text-white selection:bg-[#cc00cc]/30 pt-28 lg:pt-18  w-full min-h-screen">
+            <Helmet>
+                <title>Ready-To-Use Products in Gwalior - AdRyter | SaaS Solutions</title>
+                <meta name="description" content="Explore AdRyter's ready-to-use software products in Gwalior: CRM systems, School Management, and Hospital ERP interfaces." />
+                <meta name="keywords" content="Best Software Development Company in Gwalior, SaaS Products Gwalior, CRM Software Gwalior, School Management System Gwalior, Hospital ERP Software" />
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="Ready-To-Use Products in Gwalior - AdRyter | SaaS Solutions" />
+                <meta property="og:description" content="Explore AdRyter's ready-to-use software products in Gwalior: CRM systems, School Management, and Hospital ERP interfaces." />
+                <link rel="canonical" href={typeof window !== 'undefined' ? window.location.href : 'https://adryter.in/products'} />
+            </Helmet>
             {/* Background ambient glow effect */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-[radial-gradient(ellipse_at_center,rgba(102,0,102,0.1)_0%,transparent:70%)] pointer-events-none" />
 

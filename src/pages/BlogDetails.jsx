@@ -4,7 +4,7 @@ import { useParams, Link } from 'react-router-dom';
 
 import { motion, useScroll, useSpring, useMotionValue } from 'framer-motion';
 
-import { ArrowLeft, Calendar, User, MoveLeft, Sparkles, CheckCircle2 } from 'lucide-react';
+import { ArrowLeft, Calendar, User, MoveLeft, Sparkles, CheckCircle2, Share2, Twitter, Linkedin, Link2 } from 'lucide-react';
 import Footer from '../components/common/Footer';
 // Removed static data import
 
@@ -12,6 +12,8 @@ import Footer from '../components/common/Footer';
 export default function BlogDetails() {
   const { id } = useParams();
   const [post, setPost] = useState(null);
+  const [headings, setHeadings] = useState([]);
+  const [relatedPosts, setRelatedPosts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -53,7 +55,7 @@ export default function BlogDetails() {
       if (!contentRef.current) return;
       const rect = contentRef.current.getBoundingClientRect();
       const viewportHeight = window.innerHeight;
-      
+
       if (rect.top > 0) {
         scaleXValue.set(0);
       } else {
@@ -72,6 +74,41 @@ export default function BlogDetails() {
     handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, [post]);
+
+  useEffect(() => {
+    if (contentRef.current && post) {
+      const els = contentRef.current.querySelectorAll('h2, h3');
+      const hList = [];
+      els.forEach((el, i) => {
+        const id = `heading-${i}`;
+        el.setAttribute('id', id);
+        hList.push({
+          text: el.innerText,
+          id: id,
+          level: el.tagName.toLowerCase()
+        });
+      });
+      setHeadings(hList);
+    }
+  }, [post]);
+
+  useEffect(() => {
+    const fetchRelated = async () => {
+      try {
+        const response = await axios.get('/api/blog2');
+        if (response.data.success) {
+          const all = response.data.data;
+          const filtered = all.filter(p => p._id !== id);
+          const sameCategory = filtered.filter(p => p.category === post?.category);
+          const finalRelated = sameCategory.length > 0 ? sameCategory : filtered;
+          setRelatedPosts(finalRelated.slice(0, 3));
+        }
+      } catch (err) {
+        console.error("Failed to fetch related", err);
+      }
+    };
+    if (post) fetchRelated();
+  }, [id, post]);
 
 
   if (loading) {
@@ -162,6 +199,45 @@ export default function BlogDetails() {
                 />
               </div>
             </div>
+
+            {/* Related Posts Widget */}
+            {relatedPosts.length > 0 && (
+              <div className="pt-6 flex flex-col gap-4 mt-4">
+                <h5 className="text-[11px] font-black text-white uppercase tracking-widest flex items-center gap-1.5 border-b border-white/5 pb-3">
+                  <Sparkles size={12} className="text-[#cc00cc]" /> Related Reads
+                </h5>
+                <div className="flex flex-col gap-4">
+                  {relatedPosts.map((p) => (
+                    <Link 
+                      key={p._id} 
+                      to={`/blogs/${p._id}`} 
+                      className="group flex gap-3 items-center"
+                    >
+                      <div className="w-14 h-14 rounded-xl overflow-hidden border border-white/10 shrink-0 bg-[#0c0c0c]">
+                        <img src={p.image} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500 brightness-90 border-r border-white/5" alt={p.title} />
+                      </div>
+                      <div className="flex flex-col gap-0.5 flex-1 min-w-0">
+                        <span className="text-[9px] font-black uppercase text-[#cc00cc] tracking-wider">{p.category}</span>
+                        <h6 className="text-[12px] font-bold text-gray-300 group-hover:text-white leading-snug transition-colors line-clamp-2">
+                          {p.title}
+                        </h6>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Optional support card or banner */}
+            <Link to="/contact#contact-form" className="mt-8 flex flex-col gap-2 p-5 rounded-2xl bg-linear-to-br from-[#cc00cc]/5 to-transparent border border-[#cc00cc]/10 backdrop-blur-sm relative overflow-hidden group cursor-pointer">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-[#cc00cc]/5 rounded-full blur-2xl group-hover:bg-[#cc00cc]/10 transition-all duration-500" />
+              <h6 className="text-[13px] font-black text-white relative z-10 leading-tight">Need modern tech scale solutions?</h6>
+              <p className="text-[11px] text-gray-400 font-medium leading-relaxed relative z-10">Get custom website & app deployment from our team.</p>
+              <div className="text-[11px] font-black text-[#cc00cc] flex items-center gap-1 mt-1 group-hover:underline relative z-10">
+                GET A QUOTE
+              </div>
+            </Link>
+
 
           </div>
         </div>

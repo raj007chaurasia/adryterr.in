@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { Link } from "react-router-dom";
 import MobileServices from "./MobileServices";
 import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
 import { ArrowRight, Phone } from "lucide-react";
@@ -7,9 +8,9 @@ import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 // Import images from assets
-import web1 from "@/assets/services/web1.png";
-import web2 from "@/assets/services/web2.png";
-import app1 from "@/assets/services/app1.png";
+import web1 from "@/assets/services/web3.png";
+import web2 from "@/assets/services/web4.png";
+import app1 from "@/assets/services/app3.jpeg";
 import app2 from "@/assets/services/app2.png";
 import ai1 from "@/assets/services/ai1.png";
 import ai2 from "@/assets/services/ai2.png";
@@ -62,14 +63,17 @@ const scrollContent = services.map((service) => ({
       <p className="text-gray-400 text-base md:text-xl leading-relaxed max-w-md font-medium">
         {service.description}
       </p>
-      <motion.a
-        href="#contact"
+      <motion.div
         whileHover={{ x: 10 }}
-        className="flex items-center gap-2 text-white font-bold tracking-tight text-lg group transition-all"
       >
-        See More
-        <ArrowRight className="w-5 h-5 text-[#660066] transition-transform group-hover:translate-x-1" />
-      </motion.a>
+        <Link
+          to="/services"
+          className="flex items-center gap-2 text-white font-bold tracking-tight text-lg group transition-all w-fit"
+        >
+          See More
+          <ArrowRight className="w-5 h-5 text-[#660066] transition-transform group-hover:translate-x-1" />
+        </Link>
+      </motion.div>
     </div>
   ),
   content: (
@@ -158,7 +162,10 @@ export default function Services() {
             {/* Animated Glow Border */}
             <div className="absolute -inset-1 bg-linear-to-r from-[#660066] via-[#a855f7] to-[#660066] rounded-full blur opacity-25 group-hover:opacity-60 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
 
-            <motion.button
+            <motion.a
+              href="https://wa.me/917738538548"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
               className="relative flex items-center gap-4 cursor-pointer bg-[#0a0a0c]/80 backdrop-blur-xl border border-white/10 text-white px-12 py-5 rounded-full font-bold text-lg shadow-2xl transition-all"
@@ -167,7 +174,7 @@ export default function Services() {
               <div className="flex items-center  justify-center w-8 h-8 rounded-full bg-white/5 border border-white/10 group-hover:bg-[#660066] transition-colors">
                 <Phone className="w-4 h-4 text-white " />
               </div>
-            </motion.button>
+            </motion.a>
           </motion.div>
         </div>
       </div>

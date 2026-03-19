@@ -29,6 +29,14 @@ const Projects = () => {
             { image: '/images/image3.png', text: 'glory' ,link:'https://glory.shriradhecollection.com/'},
             { image: '/images/image4.png', text: 'edukul classes' ,link:'https://www.edukulclasses.com/'},
             { image: '/images/image5.png', text: 'royal milestone resorts' ,link:'https://royalmilestoneresorts.com/'},
+            { image: '/images/image6.png', text: 'pedneuro' ,link:'https://pedneuro.in/'},
+            { image: '/images/image7.png', text: 'itmuniversity' ,link:'https://www.itmuniversity.ac.in/'},
+            { image: '/images/image8.png', text: 'oxfordpublicschool' ,link:'https://oxfordpublicschool.net/'},
+            { image: '/images/image9.png', text: 'ashiketsable' ,link:'https://draashiketsable.com/'},
+            { image: '/images/image10.png', text: 'alljewelz' ,link:'https://alljewelz.vercel.app/admin'},
+            { image: '/images/image11.png', text: 'bibifatima' ,link:'https://bibifatima.vercel.app/'},
+            { image: '/images/image12.png', text: 'earthsbeauty' ,link:'https://earthsbeauty.in/'},
+            { image: '/images/image13.png', text: 'yogatravels' ,link:'https://yoga-tours-travels.vercel.app/'},
         ];
         return base;
     }, []);
@@ -44,7 +52,7 @@ const Projects = () => {
 
     useMotionValueEvent(scrollYProgress, "change", (latest) => {
         // Map [0, 1] scroll to [-100, 100] rotation
-        const rotationValue = -100 + latest * 200;
+        const rotationValue = -100 + latest * 80;
         setExtScroll(rotationValue);
     });
 
@@ -79,7 +87,7 @@ const Projects = () => {
                     ) : (
                         <CircularGallery
                             items={deskProjectItems}
-                            bend={2}
+                            bend={0.2}
                             textColor="#ffffff"
                             borderRadius={0.03}
                             font="bold 20px Inter"
