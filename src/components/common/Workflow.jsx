@@ -107,7 +107,7 @@ const Workflow = () => {
                     </div>
  
                     {/* Middle Section (Logo Row) */}
-                    <div className="hidden lg:flex relative h-86 z-40 items-center justify-center pointer-events-none">
+                    <div className="hidden  lg:flex relative h-80 z-40 items-center justify-center pointer-events-none -translate-y-8">
                         <motion.div 
                             animate={{ 
                                 scale: [1, 1.08, 1],

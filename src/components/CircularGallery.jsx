@@ -46,7 +46,7 @@ function createTextTexture(gl, text, font = 'bold 30px monospace', color = 'blac
   const placeholder = new Image();
   placeholder.src = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
 
-  const texture = new Texture(gl, { 
+  const texture = new Texture(gl, {
     generateMipmaps: false,
     image: placeholder
   });
@@ -96,7 +96,7 @@ class Title {
           gl_FragColor = vec4(color.rgb * 1.2, color.a); 
         }
       `,
-      uniforms: { 
+      uniforms: {
         tMap: { value: texture },
         uOpacity: { value: 1.0 }
       },
@@ -283,7 +283,7 @@ class Media {
       const isMobile = window.innerWidth < 768;
       // Further reduce bend aggressiveness on mobile to prevent edge clipping
       const adaptiveBend = isMobile ? this.bend * 0.35 : this.bend;
-      
+
       const B_abs = Math.abs(adaptiveBend);
       const R = (H * H + B_abs * B_abs) / (2 * B_abs);
       const effectiveX = Math.min(Math.abs(x), H);
@@ -359,7 +359,7 @@ class Media {
     }
     this.scale = this.screen.height / 1500;
     const isMobile = window.innerWidth < 768;
-    
+
     // Drastically reduced scaling for mobile to fit within small viewports
     const baseHeight = isMobile ? 550 : 600;
     this.plane.scale.y = (this.viewport.height * (baseHeight * this.scale)) / this.screen.height;
